@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120151157) do
+ActiveRecord::Schema.define(version: 20171120160725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "landmarks", force: :cascade do |t|
+    t.string "name"
+    t.decimal "lat"
+    t.decimal "lng"
+    t.text "description"
+    t.string "city"
+    t.string "postal_code"
+    t.string "address"
+    t.string "country"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stories", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "landmark_id"
+    t.string "title"
+    t.string "image"
+    t.string "mp3"
+    t.string "description"
+    t.string "language"
+    t.string "category"
+    t.decimal "lat"
+    t.decimal "lng"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["landmark_id"], name: "index_stories_on_landmark_id"
+    t.index ["user_id"], name: "index_stories_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,8 +59,15 @@ ActiveRecord::Schema.define(version: 20171120151157) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "image"
+    t.string "city"
+    t.text "description"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "stories", "landmarks"
+  add_foreign_key "stories", "users"
 end
