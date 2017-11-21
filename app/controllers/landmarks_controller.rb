@@ -4,6 +4,6 @@ class LandmarksController < ApplicationController
   end
 
   def show
-    @landmark = Landmark.find_by_id(params[:landmark_id])
+    @landmark = Landmark.find_by_id(params[:id])
   end
 end
