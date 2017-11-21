@@ -2,7 +2,7 @@
     <% landmarks.each do |landmark| %>
     <%= link_to landmark_path(landmark) do %>
     <div class="col-xs-12 col-md-6">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= landmark.image %>);">
+      <div class="card landmark-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= landmark.image %>);">
         <div class="card-description">
           <h2>
             <%= landmark.name %>

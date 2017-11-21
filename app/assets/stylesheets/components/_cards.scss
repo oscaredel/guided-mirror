@@ -47,6 +47,12 @@
   opacity: 0.1;
 }
 
+.landmark-card {
+  margin: 5px;
+  box-shadow: 2px 2px 3px rgba(50, 50, 50, 0.8);
+  border-radius: 3px;
+}
+
 // HTML:
 // <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
 //   <div class="card-category">Popular</div>

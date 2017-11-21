@@ -246,7 +246,7 @@ military_tour = Story.create!(
   title: "Dutch military history",
   image: "https://lh4.ggpht.com/55brX12p5OMBrusqfxi6oBP8tVQ8Vpst922Or5yzgMwRC07_8I1m8rQMwSzCO0d2gk3g6Eq1oDTu0hRHL-_w-SgbQlY=s800",
   mp3:"../app/assets/audio/Bijenkorf.mp3",
-  description: "Some ass-kicking stories about the wars of Dutch with the British, Spanish and Germans",
+  description: "Some ass-kicking stories about the Dutch wars with the British, Spanish and Germans",
   language: "English",
   category: "History",
   lat: 52.3660,
