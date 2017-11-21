@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'stories/index'
+
+  get 'stories/show'
   get 'users/show'
 
   devise_for :users
@@ -9,4 +12,5 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show]
   resources :landmarks, only: [:index, :show]
+  resources :stories, only: [:index, :show]
 end
