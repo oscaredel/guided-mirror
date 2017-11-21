@@ -1,0 +1,117 @@
+.story-list {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Body design */
+.story-list-body {
+  flex: 1 1 auto;
+}
+.story-list-body h3 {
+  font-weight: bold;
+  font-size: 23px;
+  margin-top: 0;
+}
+.story-list-body p {
+  font-weight: lighter;
+  color: #999999;
+  margin-bottom: 0;
+}
+
+/* Product image */
+.story-list-image {
+  border-radius: 10px;
+  margin-right: 20px;
+  width: 175px;
+}
+
+/* Upvote design */
+.story-list-upvote {
+  padding-right: 20px;
+  text-align: center;
+  transition: all 0.15s ease;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 20px;
+}
+.story-list-count {
+  margin: 2px 0 0;
+}
+.story-list-arrow {
+  transition: all 0.15s ease;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-bottom: 9px solid black;
+  border-radius: 2px;
+  margin: auto;
+}
+
+/* Controls design */
+.story-list-controls {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+.story-list-controls a {
+  padding: 0 20px;
+  font-size: 17px;
+  color: #E6E6E6;
+}
+.story-list-controls a:hover {
+  color: #D3473C !important
+}
+.story-list-controls-hidden a {
+  color: transparent;
+  font-size: 15px;
+  transition: all 0.15s ease;
+  border-color: transparent;
+}
+
+/* Hover effects */
+.story-list:hover {
+  background: #F2EFE6;
+  cursor: pointer;
+}
+.story-list-upvote:hover, .story-list-upvote.story-list-upvote-upvoted {
+  color: #5898f1;
+  cursor: pointer;
+}
+.story-list-upvote-upvoted .story-list-arrow {
+  border-bottom-color: #5898f1;
+}
+// .product:hover .product-upvote {
+//   transform: scale(1.2)
+// }
+.story-list:hover .story-list-controls-hidden a {
+  color: #E6E6E6;
+}
+.story-list-upvote:hover .story-list-arrow {
+  border-bottom: 9px solid #5898f1;
+}
+
+// <div class="story-list">
+//   <div class='story-list-upvote'>
+//     <div class="story-list-arrow"></div>
+//     <div class='story-list-count'>95</div>
+//   </div>
+//   <img src="kudoz.jpg" alt="kudoz" class="story-list-image hidden-xs">
+//   <div class='story-list-body'>
+//     <h3>Kudoz</h3>
+//     <p>Best job offers on your phone</p>
+//   </div>
+//   <ul class="list-inline story-list-controls hidden-sm hidden-xs">
+//     <li><a href=""><i class="fa fa-heart"></i></a></li>
+//     <li><a href=""><i class="fa fa-share"></i></a></li>
+//     <li><a href=""><i class="fa fa-star"></i></a></li>
+//   </ul>
+// </div>
+
