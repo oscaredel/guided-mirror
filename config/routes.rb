@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'stories/index'
 
   get 'stories/show'
+  get 'users/show'
 
   devise_for :users
   root to: 'pages#home'
