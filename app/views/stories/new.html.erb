@@ -1,0 +1,22 @@
+<div class="container">
+
+  <h1>Create a new story</h1>
+
+  <h2>Add a story for <%= @user.first_name %> <%= @user.last_name %> </h2>
+
+  <%= simple_form_for(@story) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.association :landmark, collection: Landmark.all %>
+  <%= f.input :image %>
+  <%= f.input :image_cache, as: :hidden %>
+  <%= f.submit "Add your story", class:"btn btn-primary"%>
+  <% end %>
+
+</div>
+
+
+<!--
+  belongs_to :user
+  belongs_to :landmark
+-->
