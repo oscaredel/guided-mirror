@@ -8,7 +8,7 @@ class Landmark < ApplicationRecord
   geocoded_by :address, :latitude  => :lat, :longitude => :lng
   after_validation :geocode, if: :address_changed?
 
-  # def address
-  #   [:address, :postal_code, :city, :country].compact.join(', ')
-  # end
+  def address
+    [:address, :postal_code, :city, :country].compact.join(', ')
+  end
 end
