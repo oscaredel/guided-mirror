@@ -8,5 +8,5 @@ class Story < ApplicationRecord
   validates :lng, presence: :true
 
   # Photo upload:
-  mount_uploader :image, PhotoUploader
+  mount_uploader :image, ImageUploader
 end

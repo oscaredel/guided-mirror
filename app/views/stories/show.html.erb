@@ -1,2 +1,23 @@
-<h1>Stories#show</h1>
-<p>Find me in app/views/stories/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="landmarkshow-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.1) 0%, rgba(0,36,61,0.1) 50%), url(<%= @story.image %>);">
+        <div class="landmarkbanner-content">
+          <h1>
+            <%= @story.title %>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 landmarkshow-content">
+      <p>
+        <%= @story.description %>
+      </p>
+    </div>
+  </div>
+</div>
