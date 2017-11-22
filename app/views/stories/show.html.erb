@@ -18,6 +18,18 @@
       <p>
         <%= @story.description %>
       </p>
+      <p>
+        <strong>Created by: </strong><%= @story.user.first_name + " " + @story.user.last_name %>
+      </p>
+      <p>
+        <strong>Language: </strong><%= @story.language %>
+      </p>
+      <p>
+        <strong>Category: </strong><%= @story.category %>
+      </p>
+      <p>
+        <strong>Landmark </strong><%= @story.landmark.name %>
+      </p>
     </div>
   </div>
 </div>
