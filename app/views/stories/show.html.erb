@@ -28,7 +28,10 @@
         <strong>Category: </strong><%= @story.category %>
       </p>
       <p>
-        <strong>Landmark </strong><%= @story.landmark.name %>
+        <strong>Landmark: </strong>
+          <%= link_to landmark_path(@story.landmark) do %>
+            <%= @story.landmark.name %>
+          <% end %>
       </p>
     </div>
   </div>

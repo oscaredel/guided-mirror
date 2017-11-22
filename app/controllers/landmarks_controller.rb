@@ -19,5 +19,6 @@ class LandmarksController < ApplicationController
 
   def show
     @landmark = Landmark.find_by_id(params[:id])
+    @stories = @landmark.stories
   end
 end
