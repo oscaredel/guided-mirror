@@ -5,7 +5,6 @@ class LandmarksController < ApplicationController
     @markers = Gmaps4rails.build_markers(@landmarks) do |landmark, marker|
       marker.lat landmark.lat
       marker.lng landmark.lng
-      # marker.infowindow render_to_string(partial: "/landmarks/map_box", locals: { landmark: landmark })
       marker.infowindow "<div class='marker-card'> <a class='marker-link' href='#{landmark_path(landmark)}'>
       <br> <p class='marker-text'>#{landmark.name}</p> </a>
       </div>"
@@ -13,7 +12,6 @@ class LandmarksController < ApplicationController
         width: 32,
         height: 32
         })
-
     end
   end
 
