@@ -98,6 +98,16 @@
   border-bottom: 9px solid #5898f1;
 }
 
+.story-link {
+  display: flex;
+  align-items: center;
+}
+
+.story-link:hover {
+  text-decoration: none;
+  color:#5898f1;
+}
+
 // <div class="story-list">
 //   <div class='story-list-upvote'>
 //     <div class="story-list-arrow"></div>

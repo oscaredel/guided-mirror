@@ -6,4 +6,7 @@ class User < ApplicationRecord
   # validates :last_name, presence: :true
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  # Photo upload:
+  # mount_uploader :image, PhotoUploader
 end
