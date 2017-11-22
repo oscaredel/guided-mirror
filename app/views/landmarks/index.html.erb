@@ -1,6 +1,8 @@
 <div class="container">
   <h1>All Landmarks</h1>
 
-<%= render 'landmark_list', landmarks: @landmarks %>
+  <%= render 'shared/map', markers: @markers %>
+
+  <%= render 'landmark_list', landmarks: @landmarks %>
 
 </div>

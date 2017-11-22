@@ -81,8 +81,8 @@ puts "Seeding locations..."
 
 eye_film_museum = Landmark.create!(
   name: "EYE Film Institute Netherlands",
-  lat: 52.3600,
-  lng: 4.8852,
+  # lat: 52.3600,
+  # lng: 4.8852,
   description: "Huge collection of Dutch & foreign movies & film posters in contemporary, waterside culture center.",
   city: "Amsterdam",
   postal_code: "1031 KT",
@@ -93,8 +93,8 @@ eye_film_museum = Landmark.create!(
 
 rijksmuseum = Landmark.create!(
   name: "Rijksmuseum",
-  lat: 52.3843,
-  lng: 4.9008,
+  # lat: 52.3843,
+  # lng: 4.9008,
   description: "The Rijksmuseum is a Dutch national museum dedicated to arts and history in Amsterdam. The museum is located at the Museum Square in the borough Amsterdam South, close to the Van Gogh Museum, the Stedelijk Museum Amsterdam, and the Concertgebouw.",
   city: "Amsterdam",
   postal_code: "1071 XX",
@@ -105,8 +105,8 @@ rijksmuseum = Landmark.create!(
 
 van_gogh_museum = Landmark.create!(
   name: "Van Gogh Museum",
-  lat: 52.3584,
-  lng: 4.8811,
+  # lat: 52.3584,
+  # lng: 4.8811,
   description: "The Van Gogh Museum is an art museum dedicated to the works of Vincent van Gogh and his contemporaries in Amsterdam in the Netherlands.",
   city: "Amsterdam",
   postal_code: "1071 DJ",
@@ -117,8 +117,8 @@ van_gogh_museum = Landmark.create!(
 
 anne_frank_house = Landmark.create!(
   name: "Anne Frank House",
-  lat: 52.3752,
-  lng: 4.8840,
+  # lat: 52.3752,
+  # lng: 4.8840,
   description: "The Anne Frank House is a writer's house and biographical museum dedicated to Jewish wartime diarist Anne Frank. The building is located on a canal called the Prinsengracht, close to the Westerkerk, in central Amsterdam in the Netherlands.",
   city: "Amsterdam",
   postal_code: "1016 GV",
@@ -129,8 +129,8 @@ anne_frank_house = Landmark.create!(
 
 dam_square = Landmark.create!(
   name: "Dam Square",
-  lat: 52.3731,
-  lng: 4.8926,
+  # lat: 52.3731,
+  # lng: 4.8926,
   description: "Dam Square or Dam is a town square in Amsterdam, the capital of the Netherlands. Its notable buildings and frequent events make it one of the most well-known and important locations in the city and the country. ",
   city: "Amsterdam",
   postal_code: "1012 JL",
@@ -141,8 +141,8 @@ dam_square = Landmark.create!(
 
 artis = Landmark.create!(
   name: "Artis Royal Zoo",
-  lat: 52.3660,
-  lng: 4.9165,
+  # lat: 52.3660,
+  # lng: 4.9165,
   description: "Artis, short for Natura Artis Magistra, is a zoo in the centre of Amsterdam. It is the oldest zoo in the Netherlands and one of the oldest zoos of mainland Europe. Artis Royal Zoo is not just a zoo, it also contains an aquarium and a planetarium.",
   city: "Amsterdam",
   postal_code: "1018 CZ",
@@ -153,8 +153,8 @@ artis = Landmark.create!(
 
 oude_kerk = Landmark.create!(
   name: "Oude Kerk",
-  lat: 52.3744,
-  lng: 4.8982,
+  # lat: 52.3744,
+  # lng: 4.8982,
   description: "The 800-year-old Oude Kerk is Amsterdam’s oldest building and oldest parish church, founded ca. 1213 and consecrated in 1306 by the bishop of Utrecht with Saint Nicolas as its patron saint.",
   city: "Amsterdam",
   postal_code: "1012 GX",
@@ -165,8 +165,8 @@ oude_kerk = Landmark.create!(
 
 rembrandt_house = Landmark.create!(
   name: "Rembrandt House Museum",
-  lat: 52.3694,
-  lng: 4.9012,
+  # lat: 52.3694,
+  # lng: 4.9012,
   description: "The Rembrandt House Museum is a historic house and art museum in Amsterdam in the Netherlands. Painter Rembrandt lived and worked in the house between 1639 and 1656. The 17th-century interior has been reconstructed.",
   city: "Amsterdam",
   postal_code: "1011 NK",
@@ -177,8 +177,8 @@ rembrandt_house = Landmark.create!(
 
 nemo = Landmark.create!(
   name: "Science Center NEMO",
-  lat: 52.3742111,
-  lng: 4.9123385,
+  # lat: 52.3742111,
+  # lng: 4.9123385,
   description: "NEMO Science Museum is a science center in Amsterdam, Netherlands. It is located at the Oosterdok in Amsterdam-Centrum, situated between the Oosterdokseiland and the Kattenburg.",
   city: "Amsterdam",
   postal_code: "1011 VX",
@@ -189,8 +189,8 @@ nemo = Landmark.create!(
 
 stedelijk = Landmark.create!(
   name: "Stedelijk Museum",
-  lat: 52.3580,
-  lng: 4.8798,
+  # lat: 52.3580,
+  # lng: 4.8798,
   description: "The Stedelijk Museum Amsterdam, colloquially known as the Stedelijk, is a museum for modern art, contemporary art, and design located in Amsterdam, Netherlands.",
   city: "Amsterdam",
   postal_code: "1071 DJ",
@@ -201,8 +201,8 @@ stedelijk = Landmark.create!(
 
 jordaan = Landmark.create!(
   name: "Jordaan",
-  lat: 52.3739,
-  lng: 4.8809,
+  # lat: 52.3739,
+  # lng: 4.8809,
   description: "The narrow canals and streets of trendy Jordaan are flanked by indie boutiques, cozy pubs and hip eateries. Stalls at the Noordermarkt square market offer jewelry, clothes, antiques and organic food. Antiques Centre Amsterdam sells vintage ceramics and paintings, while smaller galleries in the area focus on innovative contemporary art. Other attractions include the Houseboat Museum and the Amsterdam Cheese Museum.",
   city: "Amsterdam",
   postal_code: "1016 ND",
@@ -213,8 +213,8 @@ jordaan = Landmark.create!(
 
 marihuana_museum = Landmark.create!(
   name: "Hash, Marihuana & Hemp Museum",
-  lat: 52.3718,
-  lng: 4.8969,
+  # lat: 52.3718,
+  # lng: 4.8969,
   description: "The Hash, Marihuana & Hemp Museum is a museum located in De Wallen, Amsterdam, Netherlands. According to the museum, more than two million visitors have visited the exhibition since it opened in 1985.",
   city: "Amsterdam",
   postal_code: "1012 DV",
