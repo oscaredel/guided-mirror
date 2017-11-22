@@ -6,6 +6,7 @@ class Story < ApplicationRecord
   validates :mp3, presence: :true
   validates :lat, presence: :true
   validates :lng, presence: :true
-end
 
-#uniqueness: :true
+  # Photo upload:
+  mount_uploader :image, PhotoUploader
+end

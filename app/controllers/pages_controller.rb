@@ -6,3 +6,7 @@ class PagesController < ApplicationController
     @landmarks = Landmark.first(4)
   end
 end
+
+
+# @landmark = selected of dichtstbijzijnde
+# storylist = @landmark.stories.first(5)
