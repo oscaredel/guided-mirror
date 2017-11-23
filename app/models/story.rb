@@ -9,4 +9,5 @@ class Story < ApplicationRecord
 
   # Photo upload:
   mount_uploader :image, ImageUploader
+  mount_uploader :audio, AudioUploader
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120160725) do
+ActiveRecord::Schema.define(version: 20171123101756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20171120160725) do
     t.bigint "landmark_id"
     t.string "title"
     t.string "image"
-    t.string "mp3"
+    t.string "audio"
     t.string "description"
     t.string "language"
     t.string "category"

@@ -10,6 +10,7 @@
   <%= f.association :landmark, collection: Landmark.all %>
   <%= f.input :image %>
   <%= f.input :image_cache, as: :hidden %>
+  <%= f.input :audio %>
   <%= f.submit "Add your story", class:"btn btn-primary"%>
   <% end %>
 
