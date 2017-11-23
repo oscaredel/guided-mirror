@@ -4,7 +4,7 @@ class StoriesController < ApplicationController
   end
 
   def show
-    @story = Story.find_by_id(params[:id])
+    @story = Story.find(params[:id])
   end
 
   def new
