@@ -2,8 +2,21 @@
 
 <div class="container">
 <%= render 'shared/map', markers: @markers %>
+
+
+<button id="get_location">Get my location</button>
+
 <h3>Stories</h3>
+
 <%= render 'stories/story_list', stories: @landmark.stories %>
 
 </div>
 
+<%= content_for(:after_js) do %>
+  <script>
+    $('#get_location').on("click", function(e) {
+      e.preventDefault();
+      getLocation();
+    });
+  </script>
+<% end %>
