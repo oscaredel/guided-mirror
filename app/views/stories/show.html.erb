@@ -33,6 +33,13 @@
             <%= @story.landmark.name %>
           <% end %>
       </p>
+
+      <div>
+        <%= cl_image_tag(@story.audio.filename.sub(/\.[^.]+\z/, '.png'), height: 100, width: 300, flags: "waveform", resource_type: "video", color: "blue", background: "transparent") %>
+
+
+        <%= audio_tag(cloudinary_url(@story.audio.filename.sub(/\.[^.]+\z/, '.mp3'), resource_type: 'video'), controls: true) %>
+      </div>
     </div>
   </div>
 
