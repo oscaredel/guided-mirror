@@ -1,22 +1,21 @@
 <%= render 'shared/banner', name: @landmark.name, image: @landmark.image, landmark: @landmark %>
 
 <div class="container">
-<%= render 'shared/map', markers: @markers %>
+  <%= render 'shared/map', markers: @markers %>
 
 
-<button id="get_location">Get my location</button>
+  <%= link_to "Show nearby stories", "#", id: "get_location", class: "btn btn-primary"%>
+  <h3>Stories</h3>
 
-<h3>Stories</h3>
-
-<%= render 'stories/story_list', stories: @landmark.stories %>
+  <%= render 'stories/story_list', stories: @landmark.stories %>
 
 </div>
 
 <%= content_for(:after_js) do %>
-  <script>
-    $('#get_location').on("click", function(e) {
-      e.preventDefault();
-      getLocation();
-    });
-  </script>
+<script>
+  $('#get_location').on("click", function(e) {
+    e.preventDefault();
+    getLocation();
+  });
+</script>
 <% end %>
