@@ -9,10 +9,14 @@
 puts "Creating initial seed"
 
 puts "Deleting old data"
+puts "Deleting users..."
 User.destroy_all
+puts "Deleting stories..."
 Story.destroy_all
+puts "Deleting Landmarks..."
 Landmark.destroy_all
 
+puts "Finished deleting old data"
 # ____Users___________________________________________
 puts "Seeding users..."
 
