@@ -1,21 +1,21 @@
 <div class="row">
-<% stories.each do |story|%>
-    <div class="story-list">
-      <div class='story-list-upvote'>
-        <div class="story-list-arrow"></div>
-        <div class='story-list-count'>0</div>
-      </div>
-  <%= link_to story_path(story), class:"story-link" do %>
-      <%= cl_image_tag(story.image, class: "story-list-image hidden-xs") %>
-      <div class='story-list-body'>
-        <h3><%= story.title %></h3>
-        <p><%= story.description %></p>
-      </div>
-  <% end %>
-      <ul class="list-inline story-list-controls hidden-sm hidden-xs">
-
-       <!--  <li><a href=""><i class="fa fa-star"></i></a></li> -->
-      </ul>
+  <% stories.each do |story|%>
+  <div class="story-list">
+    <div class='story-list-upvote'>
+      <div class="story-list-arrow"></div>
+      <div class='story-list-count'>0</div>
     </div>
-<% end %>
+    <%= link_to story_path(story), class:"story-link" do %>
+    <%= cl_image_tag(story.image, class: "story-list-image hidden-xs") %>
+    <div class='story-list-body'>
+      <h3><%= story.title %></h3>
+      <p><%= story.description %></p>
+    </div>
+    <% end %>
+    <ul class="list-inline story-list-controls hidden-sm hidden-xs">
+      <li><%= audio_tag(cloudinary_url(story.audio.filename.sub(/\.[^.]+\z/, '.mp3'), resource_type: 'video'), controls: true) %></li>
+      <!--  <li><a href=""><i class="fa fa-star"></i></a></li> -->
+    </ul>
+  </div>
+  <% end %>
 </div>
