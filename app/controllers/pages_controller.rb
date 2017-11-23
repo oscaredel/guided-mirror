@@ -2,8 +2,19 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    @stories = Story.all.sample(3)
-    @landmarks = Landmark.all.sample(4)
+    @landmarks = Landmark.all
+    @landmark = Landmark.all.sample
+    @markers = Gmaps4rails.build_markers(@landmarks) do |landmark, marker|
+      marker.lat landmark.lat
+      marker.lng landmark.lng
+      marker.infowindow "<div class='marker-card'> <a class='marker-link' href='#{landmark_path(landmark)}'>
+      <br> <p class='marker-text'>#{landmark.name}</p> </a>
+      </div>"
+      marker.picture({
+        width: 32,
+        height: 32
+        })
+    end
   end
 end
 

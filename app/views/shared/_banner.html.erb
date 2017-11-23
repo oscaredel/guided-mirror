@@ -1,8 +1,9 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(247,129,84,0.4) 0%, rgba(242,193,78,0.2) 50%), url('https://static.pexels.com/photos/20967/pexels-photo.jpg');">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(247,129,84,0.4) 0%, rgba(242,193,78,0.2) 50%), url(<%= image %>);">
   <div class="banner-content">
-   <h1>Guided</h1>
-   <p>Everyone is a storyteller</p>
-   <!-- <a class="btn btn-primary btn-lg">Start now</a> -->
+   <h1><%= name %></h1>
+   <!-- <p>Everyone is a storyteller</p> -->
+   <%= button_to "Discover Stories", landmark_path(landmark),
+   class: "btn btn-primary btn-lg", method: :get %>
  </div>
 </div>
 

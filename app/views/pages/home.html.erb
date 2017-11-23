@@ -1,11 +1,9 @@
-<%= render 'shared/banner' %>
+<%= render 'shared/banner', name: @landmark.name, image: @landmark.image, landmark: @landmark %>
 
 <div class="container">
-
-<h1>Browse landmarks</h1>
-<%= render 'landmarks/landmark_list', landmarks: @landmarks %>
-<h1>Top Stories</h1>
-<%= render 'stories/story_list', stories: @stories %>
+<%= render 'shared/map', markers: @markers %>
+<h3>Stories</h3>
+<%= render 'stories/story_list', stories: @landmark.stories %>
 
 </div>
 
