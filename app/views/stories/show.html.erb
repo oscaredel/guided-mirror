@@ -19,7 +19,10 @@
         <%= @story.description %>
       </p>
       <p>
-        <strong>Created by: </strong><%= @story.user.first_name + " " + @story.user.last_name %>
+        <strong>Created by: </strong>
+        <%= link_to user_path(@story.user) do %>
+        <%= @story.user.first_name + " " + @story.user.last_name %>
+        <% end %>
       </p>
       <p>
         <strong>Language: </strong><%= @story.language %>
