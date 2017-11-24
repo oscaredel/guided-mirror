@@ -20,6 +20,10 @@
   <div>
     <h3>Stories by <%= @user.first_name %></h3>
   <%= render 'stories/story_list', stories: @stories %>
+<div class="text-align-center-div">
+
+  <%= link_to "Upload a new story", new_story_path, class: "btn btn-success story-upload-btn" %>
+</div>
   </div>
 </div>
 
