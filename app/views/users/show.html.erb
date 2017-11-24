@@ -6,9 +6,21 @@
     <div class="col-xs-12 col-md-9">
       <div>
         <h1>
-        <%= @user.first_name + " " + @user.last_name %>
+          <%= @user.first_name + " " + @user.last_name %>
         </h1>
+      </div>
+      <div>
+        <strong>City: </strong><%= @user.city %>
+      </div>
+      <div>
+        <%= @user.description %>
       </div>
     </div>
   </div>
+  <div>
+    <h3>Stories by <%= @user.first_name %></h3>
+  <%= render 'stories/story_list', stories: @stories %>
+  </div>
 </div>
+
+
