@@ -7,14 +7,14 @@
     <h2>Discover landmarks</h2>
     <%= render 'landmarks/landmark_list', landmarks: @landmarks_sample %>
     <%= button_to "All landmarks", landmarks_path,
-    class: "btn btn-primary btn-lg", method: :get %>
+    class: "home-btn btn-primary btn-lg", method: :get %>
   </div>
 
   <div>
     <h2>Discover Stories</h2>
     <%= render 'stories/story_list', stories: @stories %>
     <%= button_to "All Stories", stories_path,
-    class: "btn btn-primary btn-lg", method: :get %>
+    class: "home-btn btn-primary btn-lg", method: :get %>
   </div>
   <div>
     <%= render 'shared/map', markers: @markers %>
