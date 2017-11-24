@@ -4,10 +4,14 @@ class PagesController < ApplicationController
   def home
     coordinates = nil
     coordinates = params[:coord].map(&:to_f) if params[:coord]
+    @landmarks_all = Landmark.all
+    @landmarks = @landmarks_all.sample(4)
+    @stories = Story.all.sample(4)
 
-    @landmarks = coordinates.nil? ? Landmark.all : Landmark.near(coordinates, 1)
-    @landmark = @landmarks.sample
-    @markers = Gmaps4rails.build_markers(@landmarks) do |landmark, marker|
+
+
+    # @landmarks = coordinates.nil? ? Landmark.all : Landmark.near(coordinates, 1)
+    @markers = Gmaps4rails.build_markers(@landmarks_all) do |landmark, marker|
       marker.lat landmark.lat
       marker.lng landmark.lng
       marker.infowindow "<div class='marker-card'> <a class='marker-link' href='#{landmark_path(landmark)}'>
@@ -19,9 +23,5 @@ class PagesController < ApplicationController
         })
     end
   end
-
-
-# @landmark = selected of dichtstbijzijnde
-# storylist = @landmark.stories.first(5)
 
 end
