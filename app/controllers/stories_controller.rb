@@ -8,6 +8,11 @@ class StoriesController < ApplicationController
   end
 
   def new
+    if params["landmark"]
+      @landmark = Landmark.find(params["landmark"].to_i)
+    else
+      @landmark = nil
+    end
     @user = User.find(current_user.id)
     @story = Story.new
   end

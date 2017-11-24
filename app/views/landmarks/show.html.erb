@@ -21,6 +21,11 @@
 
       <%= render 'stories/story_list', stories: @stories %>
 
+      <div class="text-align-center-div">
+
+       <%= link_to "Add a new story", new_story_path(landmark: @landmark.id), class: "btn btn-success story-upload-btn" %>
+
+      </div>
     </div>
   </div>
 </div>

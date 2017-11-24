@@ -1,13 +1,24 @@
-<div class="container">
+<% link = ['https://static.pexels.com/photos/15286/pexels-photo.jpg', 'https://static.pexels.com/photos/374710/pexels-photo-374710.jpeg', 'https://static.pexels.com/photos/572688/pexels-photo-572688.jpeg', 'https://static.pexels.com/photos/52599/pexels-photo-52599.jpeg'].sample %>
 
-  <h1>Create a new story</h1>
+<% if @landmark != nil %>
+  <div class="background-image" style="background-image:url('<%= @landmark.image %>');"></div>
+  <% else %>
+  <div class="background-image" style="background-image:url(<%=link%>);"></div>
+<% end %>
 
-  <h2>Add a story for <%= @user.first_name %> <%= @user.last_name %> </h2>
+<div class="form-container">
+
+  <h1>Upload a new story</h1>
+  <h4>This story will be added to your account, <%= @user.first_name %> <%= @user.last_name %> </h4>
 
   <%= simple_form_for(@story) do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
-  <%= f.association :landmark, collection: Landmark.all %>
+  <% if @landmark == nil %>
+    <%= f.association :landmark, collection: Landmark.all %>
+  <% else %>
+    <%= f.input :landmark_id, input_html: { value: @landmark.id }, as: :hidden %>
+  <% end %>
   <%= f.input :image %>
   <%= f.input :image_cache, as: :hidden %>
   <%= f.input :audio %>
