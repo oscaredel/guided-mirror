@@ -10,6 +10,7 @@
   justify-content: space-between;
   position: absolute;
   background-color: transparent;
+  z-index: 9999;
 }
 
 .container {
@@ -51,8 +52,10 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: white;
-  font-size: 14px;
+     color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(1,1,1,0.3);
 }
 .navbar-wagon-link:hover {
   color: #da552f;
