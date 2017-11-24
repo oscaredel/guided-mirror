@@ -1,10 +1,10 @@
 <div class="row">
   <% stories.each do |story|%>
   <div class="story-list">
-    <div class='story-list-upvote'>
+ <!--    <div class='story-list-upvote'>
       <div class="story-list-arrow"></div>
       <div class='story-list-count'>0</div>
-    </div>
+    </div> -->
     <%= link_to story_path(story), class:"story-link" do %>
     <%= cl_image_tag(story.image, class: "story-list-image hidden-xs") %>
     <div class='story-list-body'>
