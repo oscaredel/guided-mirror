@@ -1,6 +1,7 @@
 class LandmarksController < ApplicationController
   def index
-    @landmarks = Landmark.all.where.not(lat: nil, lng: nil)
+    coordinates = params[:coord] ? params[:coord].map(&:to_f) : nil
+    @landmarks = coordinates.nil? ? Landmark.all : Landmark.near(coordinates, 1.3)
 
     @markers = Gmaps4rails.build_markers(@landmarks) do |landmark, marker|
       marker.lat landmark.lat
@@ -18,21 +19,5 @@ class LandmarksController < ApplicationController
   def show
     @landmark = Landmark.find_by_id(params[:id])
     @stories = @landmark.stories
-
-    # @user = current_user
-    # @hash = Gmaps4rails.build_markers(@user) do |user, marker|
-    #   marker.lat user.latitude
-    #   marker.lng user.longitude
-    # end
-    # append_cur_location
   end
-
- #  def append_cur_location
- #    @hash << { :lat=>action[0], :lng=>action[1]}
- #  end
-
- #  def action
- #   @lat_lng = cookies[:lat_lng].split("|")
- # end
-
 end

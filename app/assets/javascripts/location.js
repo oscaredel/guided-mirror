@@ -15,7 +15,7 @@ function enableLocation() {
 }
 
 function showPosition(position) {
-    window.location = '/?coord[]='+position.coords.latitude+'&coord[]='+position.coords.longitude;
+    window.location = '/landmarks/?coord[]='+position.coords.latitude+'&coord[]='+position.coords.longitude;
 }
 
 function enablePosition(position) {

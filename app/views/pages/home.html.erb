@@ -1,34 +1,22 @@
+
 <%= render 'shared/banner' %>
 
 <div class="container">
 
   <div>
     <h2>Discover landmarks</h2>
-    <%= render 'landmarks/landmark_list', landmarks: @landmarks %>
+    <%= render 'landmarks/landmark_list', landmarks: @landmarks_sample %>
     <%= button_to "All landmarks", landmarks_path,
-   class: "btn btn-primary btn-lg", method: :get %>
+    class: "btn btn-primary btn-lg", method: :get %>
   </div>
 
   <div>
     <h2>Discover Stories</h2>
     <%= render 'stories/story_list', stories: @stories %>
-      <%= button_to "All Stories", stories_path,
-      class: "btn btn-primary btn-lg", method: :get %>
-    </div>
+    <%= button_to "All Stories", stories_path,
+    class: "btn btn-primary btn-lg", method: :get %>
   </div>
-
   <div>
     <%= render 'shared/map', markers: @markers %>
-    <%= button_to "Show nearby stories", "#", id: "get_location", class: "btn btn-primary"%>
   </div>
-
 </div>
-
-<%= content_for(:after_js) do %>
-<script>
-  $('#get_location').on("click", function(e) {
-    e.preventDefault();
-    getLocation();
-  });
-</script>
-<% end %>
