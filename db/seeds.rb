@@ -35,7 +35,7 @@ jackie = User.create!(
   last_name: "Burkhart",
   email: "Jackie@gmail.com",
   password: '123456',
-  image: "https://www.google.nl/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwjclergx8_XAhUDKewKHapVCioQjRwIBw&url=https%3A%2F%2Fwww.pinterest.com%2Fkidd77%2Fthat-70s-show%2F&psig=AOvVaw1AAukxeuYP1MB42xfWUgNi&ust=1511350034125824",
+  image: "https://vignette.wikia.nocookie.net/that70sshow/images/2/2c/4jackie.jpeg",
   city: "Amsterdam",
   description: "I love shopping and know all the best places for fashion in town"
   )

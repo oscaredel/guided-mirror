@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     coordinates = nil
     coordinates = params[:coord].map(&:to_f) if params[:coord]
 
-    @landmarks = coordinates.nil? ? Landmark.all : Landmark.near(coordinates, 1)
+    @landmarks = coordinates.nil? ? Landmark.all : Landmark.near(coordinates, 1.3)
     @landmark = @landmarks.sample
     @markers = Gmaps4rails.build_markers(@landmarks) do |landmark, marker|
       marker.lat landmark.lat
