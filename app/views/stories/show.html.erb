@@ -15,27 +15,27 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 landmarkshow-content">
-      <p>
+      <div>
         <%= @story.description %>
-      </p>
-      <p>
+      </div>
+      <div>
         <strong>Created by: </strong>
         <%= link_to user_path(@story.user) do %>
         <%= @story.user.first_name + " " + @story.user.last_name %>
         <% end %>
-      </p>
-      <p>
+      </div>
+      <div>
         <strong>Language: </strong><%= @story.language %>
-      </p>
-      <p>
+      </div>
+      <div>
         <strong>Category: </strong><%= @story.category %>
-      </p>
-      <p>
+      </div>
+      <div>
         <strong>Landmark: </strong>
           <%= link_to landmark_path(@story.landmark) do %>
             <%= @story.landmark.name %>
           <% end %>
-      </p>
+      </div>
 
       <div>
         <%= cl_image_tag(@story.audio.filename.sub(/\.[^.]+\z/, '.png'), height: 100, width: 300, flags: "waveform", resource_type: "video", color: "blue", background: "transparent") %>
