@@ -5,6 +5,11 @@
 
 //= require underscore
 //= require gmaps/google
+//= require plyr
 //= require_tree .
 
 $(".alert" ).fadeOut(3000);
+
+$(document).ready(function(){
+    plyr.setup();
+  });
