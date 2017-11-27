@@ -7,8 +7,10 @@ class Landmark < ApplicationRecord
   # validates :lng, presence: :true
 
   geocoded_by :full_address, latitude: :lat, longitude: :lng
+  mount_uploader :image, ImageUploader
 
   def full_address
     [address, postal_code, city].compact.join(', ')
   end
+
 end
