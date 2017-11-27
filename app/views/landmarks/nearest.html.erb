@@ -1,0 +1,43 @@
+<div class="landmarkshow-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.1) 0%, rgba(0,36,61,0.1) 50%), url(<%= @nearest_landmark.image %>);">
+  <div class="landmarkbanner-content">
+    <p>
+      Your nearest landmark
+    </p>
+    <h1>
+      <%= @nearest_landmark.name %>
+    </h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-lg-6 landmarkshow-content">
+      <p>
+        <%= @nearest_landmark.description %>
+      </p>
+
+
+    </div>
+
+    <div class="col-xs-12">
+
+      <%= render 'stories/story_list', stories: @stories %>
+
+    </div>
+
+    <div class="col-xs-12">
+      <%= link_to "Add a new story", new_story_path(landmark: @nearest_landmark.id), class: "btn btn-success story-upload-btn" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Other landmarks near you</h2>
+      <%= render 'landmark_list', landmarks: @landmarks.drop(1) %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= render 'shared/map', markers: @markers %>
+    </div>
+  </div>
+</div>

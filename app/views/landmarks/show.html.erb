@@ -1,10 +1,10 @@
-      <div class="landmarkshow-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.1) 0%, rgba(0,36,61,0.1) 50%), url(<%= @landmark.image %>);">
-        <div class="landmarkbanner-content">
-          <h1>
-            <%= @landmark.name %>
-          </h1>
-        </div>
-      </div>
+<div class="landmarkshow-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.1) 0%, rgba(0,36,61,0.1) 50%), url(<%= @landmark.image %>);">
+  <div class="landmarkbanner-content">
+    <h1>
+      <%= @landmark.name %>
+    </h1>
+  </div>
+</div>
 
 
 <div class="container">
@@ -13,20 +13,24 @@
       <p>
         <%= @landmark.description %>
       </p>
-
-
-
-       <%= link_to "Add a new story", new_story_path(landmark: @landmark.id), class: "btn btn-success story-upload-btn" %>
-
     </div>
-    <div class="col-xs-12 col-lg-6">
-      <%= render 'shared/map', markers: @markers %>
-    </div>
-
     <div class="col-xs-12">
 
       <%= render 'stories/story_list', stories: @stories %>
 
     </div>
+
+    <%= link_to "Add a new story", new_story_path(landmark: @landmark.id), class: "btn btn-success story-upload-btn" %>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Other landmarks near <%= @landmark.name %></h2>
+        <%= render 'landmark_list', landmarks: @nearby_landmarks %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-6">
+      <%= render 'shared/map', markers: @markers %>
+    </div>
+
   </div>
 </div>

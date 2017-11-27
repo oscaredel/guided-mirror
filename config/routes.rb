@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
 
   resources :users, only: [:show]
+  get 'landmarks/nearest', to: 'landmarks#nearest', as: 'nearest_landmark'
   resources :landmarks, only: [:index, :show]
   resources :stories, only: [:index, :show, :new, :create, :destroy]
 end
