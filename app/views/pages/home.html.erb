@@ -3,11 +3,13 @@
 
 <div class="container">
     <h2>Discover Stories</h2>
+    <p>Listen to captivating stories about any place where you might be, anytime.</p>
     <%= render 'stories/story_list', stories: @stories %>
     <%= button_to "All Stories", stories_path,
     class: "home-btn btn-primary btn-lg", method: :get %>
 
     <h2>Discover landmarks</h2>
+    <p>Explore the most interesting locations around you.</p>
     <%= render 'landmarks/landmark_list', landmarks: @landmarks_sample %>
     <%= button_to "All landmarks", landmarks_path,
     class: "home-btn btn-primary btn-lg", method: :get %>
