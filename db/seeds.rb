@@ -25,7 +25,7 @@ eric = User.create!(
   last_name: "Forman",
   email: "Eric@gmail.com",
   password: '123456',
-  image: "https://i.pinimg.com/564x/53/36/fd/5336fd5dc1c249d386102bb61d762231.jpg",
+  remote_image_url: "https://i.pinimg.com/564x/53/36/fd/5336fd5dc1c249d386102bb61d762231.jpg",
   city: "Amsterdam",
   description: "May the force be with you"
   )
@@ -35,7 +35,7 @@ jackie = User.create!(
   last_name: "Burkhart",
   email: "Jackie@gmail.com",
   password: '123456',
-  image: "https://vignette.wikia.nocookie.net/that70sshow/images/2/2c/4jackie.jpeg",
+  remote_image_url: "https://vignette.wikia.nocookie.net/that70sshow/images/2/2c/4jackie.jpeg",
   city: "Amsterdam",
   description: "I love shopping and know all the best places for fashion in town"
   )
@@ -45,7 +45,7 @@ michael = User.create!(
   last_name: "Kelso",
   email: "Michael@gmail.com",
   password: '123456',
-  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0HtMHQOS0adT22Ntfv0mecd2hDjOIp5VoZRAD8oi-GArd9D7",
+  remote_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0HtMHQOS0adT22Ntfv0mecd2hDjOIp5VoZRAD8oi-GArd9D7",
   city: "Amsterdam",
   description: "Beer!"
   )
@@ -55,7 +55,7 @@ steven = User.create!(
   last_name: "Hyde",
   email: "Steven@gmail.com",
   password: '123456',
-  image: "https://i.pinimg.com/564x/86/90/d3/8690d3b00a173450519a013b40c8de8e.jpg",
+  remote_image_url: "https://i.pinimg.com/564x/86/90/d3/8690d3b00a173450519a013b40c8de8e.jpg",
   city: "Amsterdam",
   description: "Ah, this is definitely gooder... Gooder? Yeah, that's a word!"
   )
@@ -65,7 +65,7 @@ red = User.create!(
   last_name: "Forman",
   email: "Red@gmail.com",
   password: '123456',
-  image: "http://thedevilsbench.com/wp-content/uploads/2017/03/21-times-red-forman-was-the-realest-fucker-on-the-2-19311-1450304761-1_dblbig.jpg",
+  remote_image_url: "http://thedevilsbench.com/wp-content/uploads/2017/03/21-times-red-forman-was-the-realest-fucker-on-the-2-19311-1450304761-1_dblbig.jpg",
   city: "Amsterdam",
   description: "When my time comes I want to be buried face down. That way whoever doesn't like me can kiss my ass."
   )
@@ -75,7 +75,7 @@ kitty = User.create!(
   last_name: "Forman",
   email: "Kitty@gmail.com",
   password: '123456',
-  image: "https://i.pinimg.com/736x/15/ff/40/15ff401cc3d16c5ae738f0a4e3207d60--that-s-show--show.jpg",
+  remote_image_url: "https://i.pinimg.com/736x/15/ff/40/15ff401cc3d16c5ae738f0a4e3207d60--that-s-show--show.jpg",
   city: "Amsterdam",
   description: "I love cooking and can tell you everything about the food in Amsterdam (It's not good).."
   )
@@ -92,7 +92,7 @@ eye_film_museum = Landmark.create!(
   postal_code: "1031 KT",
   address: "IJpromenade 1",
   country: "the Netherlands",
-  image: "http://ellnl.h-cdn.co/assets/16/46/980x490/landscape-1479383632-museum.jpg"
+  remote_image_url: "http://ellnl.h-cdn.co/assets/16/46/980x490/landscape-1479383632-museum.jpg"
   )
 
 rijksmuseum = Landmark.create!(
@@ -104,7 +104,7 @@ rijksmuseum = Landmark.create!(
   postal_code: "1071 XX",
   address: "Museumstraat 1",
   country: "the Netherlands",
-  image: "https://tickets.holland.com/wp-content/uploads/2015/07/rijksmuseum-bew.jpg"
+  remote_image_url: "https://tickets.holland.com/wp-content/uploads/2015/07/rijksmuseum-bew.jpg"
   )
 
 van_gogh_museum = Landmark.create!(
@@ -116,7 +116,7 @@ van_gogh_museum = Landmark.create!(
   postal_code: "1071 DJ",
   address: "Museumplein 6",
   country: "the Netherlands",
-  image: "https://thinkingmuseum.com/wp-content/uploads/sites/5/2014/09/shutterstock_415294189-e1493123993403.jpg"
+  remote_image_url: "https://thinkingmuseum.com/wp-content/uploads/sites/5/2014/09/shutterstock_415294189-e1493123993403.jpg"
   )
 
 anne_frank_house = Landmark.create!(
@@ -128,7 +128,7 @@ anne_frank_house = Landmark.create!(
   postal_code: "1016 GV",
   address: "Prinsengracht 263-267",
   country: "the Netherlands",
-  image: "http://s2.thingpic.com/images/Lk/XC75tMSfZByN69W6bXGTowHw.jpeg"
+  remote_image_url: "http://s2.thingpic.com/images/Lk/XC75tMSfZByN69W6bXGTowHw.jpeg"
   )
 
 dam_square = Landmark.create!(
@@ -140,7 +140,7 @@ dam_square = Landmark.create!(
   postal_code: "1012 JL",
   address: "Dam",
   country: "the Netherlands",
-  image: "http://www.mnque.com/wp-content/uploads/2014/08/Dam_Square.jpg"
+  remote_image_url: "http://www.mnque.com/wp-content/uploads/2014/08/Dam_Square.jpg"
   )
 
 artis = Landmark.create!(
@@ -152,7 +152,7 @@ artis = Landmark.create!(
   postal_code: "1018 CZ",
   address: "Plantage Kerklaan 38-40",
   country: "the Netherlands",
-  image: "https://www.artis.nl/media/filer_public_thumbnails/filer_public/84/cc/84ccb734-53ad-45d8-a385-83ea62da31e1/olifantenverblijf_opening_relatiedag_samuel_2017_1920x1280_9.jpg__1920x0_q85_subject_location-959%2C658_subsampling-2.jpg"
+  remote_image_url: "https://www.artis.nl/media/filer_public_thumbnails/filer_public/84/cc/84ccb734-53ad-45d8-a385-83ea62da31e1/olifantenverblijf_opening_relatiedag_samuel_2017_1920x1280_9.jpg__1920x0_q85_subject_location-959%2C658_subsampling-2.jpg"
   )
 
 oude_kerk = Landmark.create!(
@@ -164,7 +164,7 @@ oude_kerk = Landmark.create!(
   postal_code: "1012 GX",
   address: "Oudekerksplein 23",
   country: "the Netherlands",
-  image: "https://www.holland.com/upload_mm/b/e/6/cid28114_fullimage_Oude_Kerk-Amsterdam.jpg"
+  remote_image_url: "https://www.holland.com/upload_mm/b/e/6/cid28114_fullimage_Oude_Kerk-Amsterdam.jpg"
   )
 
 rembrandt_house = Landmark.create!(
@@ -176,7 +176,7 @@ rembrandt_house = Landmark.create!(
   postal_code: "1011 NK",
   address: "Jodenbreestraat 4",
   country: "the Netherlands",
-  image: "http://hotelguestservice.com/wp-content/uploads/2012/07/rembrandthuismuseum.jpg"
+  remote_image_url: "http://hotelguestservice.com/wp-content/uploads/2012/07/rembrandthuismuseum.jpg"
   )
 
 nemo = Landmark.create!(
@@ -188,7 +188,7 @@ nemo = Landmark.create!(
   postal_code: "1011 VX",
   address: "Oosterdok 2",
   country: "the Netherlands",
-  image: "http://media.ruebarue.com/photos/places/6491045277728768/1-science-center-nemo-1.jpg"
+  remote_image_url: "http://media.ruebarue.com/photos/places/6491045277728768/1-science-center-nemo-1.jpg"
   )
 
 stedelijk = Landmark.create!(
@@ -200,7 +200,7 @@ stedelijk = Landmark.create!(
   postal_code: "1071 DJ",
   address: "Museumplein 10",
   country: "the Netherlands",
-  image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/De_nieuwe_vleugel_van_het_Stedelijk_Museum_Amsterdam.jpg/1200px-De_nieuwe_vleugel_van_het_Stedelijk_Museum_Amsterdam.jpg"
+  remote_image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/De_nieuwe_vleugel_van_het_Stedelijk_Museum_Amsterdam.jpg/1200px-De_nieuwe_vleugel_van_het_Stedelijk_Museum_Amsterdam.jpg"
   )
 
 jordaan = Landmark.create!(
@@ -212,7 +212,7 @@ jordaan = Landmark.create!(
   postal_code: "1016 ND",
   address: "Rozengracht",
   country: "the Netherlands",
-  image: "http://hg2.com/wp-content/uploads/2014/08/Amsterdam-canal-Ivan-Bastien_thinkstock-resized.jpg"
+  remote_image_url: "http://hg2.com/wp-content/uploads/2014/08/Amsterdam-canal-Ivan-Bastien_thinkstock-resized.jpg"
   )
 
 marihuana_museum = Landmark.create!(
@@ -224,7 +224,7 @@ marihuana_museum = Landmark.create!(
   postal_code: "1012 DV",
   address: "Oudezijds Achterburgwal 148",
   country: "the Netherlands",
-  image: "http://hashmuseum.com/sites/default/files/grow_on_barcelona_1.jpg"
+  remote_image_url: "http://hashmuseum.com/sites/default/files/grow_on_barcelona_1.jpg"
   )
 
 
