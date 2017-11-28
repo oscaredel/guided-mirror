@@ -1,0 +1,25 @@
+<!-- Navbar -->
+<%= render partial: 'shared/tiny_banner', locals: {
+  image: ""
+} %>
+
+<!-- Background image -->
+<% link = ['https://static.pexels.com/photos/15286/pexels-photo.jpg', 'https://static.pexels.com/photos/374710/pexels-photo-374710.jpeg', 'https://static.pexels.com/photos/572688/pexels-photo-572688.jpeg', 'https://static.pexels.com/photos/52599/pexels-photo-52599.jpeg'].sample %>
+<div class="background-image" style="background-image:url(<%=link%>);"></div>
+
+
+<!-- Input form -->
+<div class="user-update-form-container">
+
+
+  <h1>Update your info</h1>
+
+  <%= simple_form_for(@user) do |f| %>
+  <%= f.input :last_name %>
+  <%= f.input :description %>
+  <%= f.input :image %>
+  <%= f.input :image_cache, as: :hidden %>
+  <%= f.submit "Update your info", class:"btn btn-primary"%>
+  <% end %>
+
+</div>
