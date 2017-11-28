@@ -18,7 +18,7 @@ class LandmarksController < ApplicationController
 
   def nearest
     coordinates = params[:coord] ? params[:coord].map(&:to_f) : nil
-    @landmarks = Landmark.near(coordinates).first(4)
+    @landmarks = Landmark.near(coordinates).first(5)
     @nearest_landmark = @landmarks.first
     @stories = @nearest_landmark.stories
 
@@ -38,7 +38,7 @@ class LandmarksController < ApplicationController
   def show
     @landmark = Landmark.find_by_id(params[:id])
     @stories = @landmark.stories
-    @nearby_landmarks = @landmark.nearbys.first(3)
+    @nearby_landmarks = @landmark.nearbys.first(2)
     @markers = Gmaps4rails.build_markers(@nearby_landmarks) do |landmark, marker|
       marker.lat landmark.lat
       marker.lng landmark.lng
@@ -52,5 +52,14 @@ class LandmarksController < ApplicationController
     end
   end
 
+
+  def follow
+    @landmark = Landmark.find(params[:id])
+    if current_user.following?(@landmark)
+      current_user.stop_following(@landmark)
+    else
+      current_user.follow(@landmark)
+    end
+  end
 
 end

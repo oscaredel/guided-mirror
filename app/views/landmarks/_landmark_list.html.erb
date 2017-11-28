@@ -1,18 +1,24 @@
-  <div class="row">
-    <% landmarks.each do |landmark| %>
-    <%= link_to landmark_path(landmark) do %>
-    <div class="col-xs-12 col-md-6">
-      <div class="card landmark-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= landmark.image %>);">
-        <div class="card-description">
-          <h2>
-            <%= landmark.name %>
-          </h2>
-          <p>
+<div class="row">
+  <% landmarks.each do |landmark| %>
+  <%= link_to landmark_path(landmark) do %>
+  <div class="col-xs-12 col-md-6">
+    <div class="card landmark-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= landmark.image %>);">
+      <div class="card-description">
 
-          </p>
-        </div>
+
+
+        <h2>
+          <%= landmark.name %>
+        </h2>
+        <p>
+
+        </p>
       </div>
     </div>
-    <% end %>
-    <% end %>
+        <%= link_to follow_landmark_path(landmark), method: :put do %>
+        <i class="fa fa-2x fa-star"></i>
+        <% end %>
   </div>
+  <% end %>
+  <% end %>
+</div>

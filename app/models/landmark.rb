@@ -1,4 +1,5 @@
 class Landmark < ApplicationRecord
+  acts_as_followable
   after_validation :geocode, if: :address_changed?
   has_many :stories
   validates :name, uniqueness: :true, presence: :true
