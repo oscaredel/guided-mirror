@@ -33,8 +33,23 @@ class StoriesController < ApplicationController
     @story.destroy
 
     redirect_to stories_path
-
   end
+
+  def upvote
+    @story = Story.find(params[:id])
+    if current_user.voted_for? @story
+      @story.unliked_by current_user
+    else
+      @story.liked_by current_user
+    end
+    redirect_to stories_path
+  end
+
+  # def unlike
+  #   @story = Story.find(params[:id])
+  #   @story.unlike_by current_user
+  #   redirect_to stories_path
+  # end
 
   def story_params
     params.require(:story).permit(:title, :description, :image, :audio, :image_cache, :landmark_id)
