@@ -1,46 +1,35 @@
-      <div class="landmarkshow-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.1) 0%, rgba(0,36,61,0.1) 50%), url(<%= @story.image %>);">
-        <div class="landmarkbanner-content">
-          <h1>
-            <%= @story.title %>
-          </h1>
-        </div>
-      </div>
+<div class="landmarkshow-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.1) 0%, rgba(0,36,61,0.1) 50%), url(<%= @story.image %>);">
+  <div class="landmarkbanner-content">
+    <h1>
+      <%= @story.title %>
+    </h1>
+  </div>
+</div>
 
-<div class="container">
+<div class="container relative-container">
   <div class="row">
-    <div class="col-xs-12 landmarkshow-content">
-      <div>
-        <%= @story.description %>
-      </div>
-      <div>
-        <strong>Created by: </strong>
-        <%= link_to user_path(@story.user) do %>
-        <%= @story.user.first_name + " " + @story.user.last_name %>
-        <% end %>
-      </div>
-      <div>
-        <strong>Language: </strong><%= @story.language %>
-      </div>
-      <div>
-        <strong>Category: </strong><%= @story.category %>
-      </div>
-      <div>
-        <strong>Landmark: </strong>
-          <%= link_to landmark_path(@story.landmark) do %>
-            <%= @story.landmark.name %>
-          <% end %>
-      </div>
-
-      <div>
-        <% if @story.audio.filename %>
-
-
-        <%= audio_tag(cloudinary_url(@story.audio.filename.sub(/\.[^.]+\z/, '.mp3'), resource_type: :video), controls: true) %>
-        <% end %>
-      </div>
+    <div class="col-xs-8 col-xs-offset-2">
+      <% if @story.user == current_user %>
+      <%= link_to story_path(@story), method: :delete, class: "btn trash-button" do %>
+      <i class="fa fa-trash"></i>
+      <% end %>
+      <% end %>
     </div>
   </div>
 
-<%= link_to "Delete Story", story_path(@story), method: :delete, class: "btn btn-danger"%>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 landmarkshow-content">
+      <%= render partial: 'info_column_left', locals: { story: @story } %>
+    </div>
+    <div class="col-xs-12 col-sm-6 landmarkshow-content">
+      <%= render partial: 'info_column_right', locals: { story: @story } %>
+    </div>
+    <div class="col-xs-12">
+      <% if @story.audio.filename %>
+      <%= audio_tag(cloudinary_url(@story.audio.filename.sub(/\.[^.]+\z/, '.mp3'), resource_type: :video), controls: true) %>
+      <% end %>
+
+    </div>
+  </div>
 
 </div>

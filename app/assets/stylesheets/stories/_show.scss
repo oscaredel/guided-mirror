@@ -6,3 +6,13 @@ body {
 .all-stories-container {
   margin: 10px
 }
+
+.spaced-out-icons {
+  li {
+    margin: 10px 0;
+    display: flex;
+    .fa {
+      flex: 0 0 50px;
+    }
+  }
+}

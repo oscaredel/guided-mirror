@@ -28,4 +28,11 @@ $grid-gutter-width: 30px;
 
 body {
  -webkit-font-smoothing: antialiased;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ .all-content-yielded {
+  flex: 1 0 auto;
+ }
 }

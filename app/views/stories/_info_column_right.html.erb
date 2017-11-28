@@ -1,0 +1,24 @@
+<ul class="list-unstyled spaced-out-icons">
+  <li>
+    <i class="fa fa-user" aria-hidden="true"></i>
+    <%= link_to user_path(story.user) do %>
+      <%= story.user.first_name + " " + story.user.last_name %>
+    <% end %>
+  </li>
+  <li>
+    <i class="fa fa-map-marker" aria-hidden="true"></i>
+    <%= link_to landmark_path(story.landmark) do %>
+      <%= story.landmark.name %>
+    <% end %>
+  </li>
+
+  <li>
+    <i class="fa fa-globe" aria-hidden="true"></i>
+    <%= story.language %>
+  </li>
+
+  <li>
+    <i class="fa fa-tag" aria-hidden="true"></i>
+    <%= story.category %>
+  </li>
+</ul>
