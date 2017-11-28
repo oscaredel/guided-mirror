@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     member do
       put "like", to: "stories#upvote"
       put "unlike", to: "stories#unlike"
+      # put "dislike", to: "links#downvote"
     end
   end
 end
