@@ -1,26 +1,2 @@
 let storyCounter = document.querySelector('div[data-id="<%= @story.id %>"]')
-storyCounter.innerHTML = '<i class="fa fa-caret-up fa-2x" aria-hidden="true"></i> <%= @story.votes_for.size %>'
-// let storyArrow = storyCounter.getParent.children[0]
-
-if (storyCounter.classList.contains("voted-black")) {
-  storyCounter.classList.replace("voted-black", "voted-red");
-  // storyArrow.style.borderBottomColor = "red";
-} else {
-  storyCounter.classList.replace("voted-red", "voted-black");
-  // storyArrow.style.borderBottomColor = "red";
-}
-
-
-// <i class="fa fa-camera-retro fa-2x"></i>
-// <i class="fa fa-caret-up fa-2x" aria-hidden="true"></i>
-// let storyListArrow =
-// let storyListCounter =
-// story-list-arrow voted-red
-// story-list-count voted-red
-
-// if (storyCounter.classList.contains("voted-red")) {
-//   storyCounter.classList.remove("voted-red");
-// } else {
-//   storyCounter.classList.add("voted-red");
-// }
-
+storyCounter.innerText = '<%= @story.votes_for.size %>'
