@@ -1,4 +1,5 @@
 class Story < ApplicationRecord
+  acts_as_votable
   belongs_to :user
   belongs_to :landmark
   validates :title, presence: :true
