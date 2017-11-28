@@ -29,13 +29,13 @@
   a {
     color: white;
     &:hover {
-      color: gold;
+      color: $red;
     }
   }
   .following-star {
-    color: yellow;
+    color: $orange;
     &:hover{
-      color: gold;
+      color: $red;
     }
   }
 }
