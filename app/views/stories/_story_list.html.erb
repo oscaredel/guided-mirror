@@ -12,12 +12,11 @@
         <% end %>
         <div class='story-list-upvote'>
           <%= link_to like_story_path(story), method: :put, remote: true do %>
-          <% if current_user.voted_for? story %>
-          <div class="story-list-arrow voted-red"></div>
+          <div class="story-list-arrow"></div>
+          <% if current_user.voted_for?(story) %>
           <div class='story-list-count voted-red' data-id='<%= story.id %>'><%=story.votes_for.size%></div>
           <% else %>
-          <div class="story-list-arrow voted-black"></div>
-          <div class='story-list-count voted-black' data-id='<%= story.id %>'><%=story.votes_for.size%></div>
+           <div class='story-list-count' data-id='<%= story.id %>'><%=story.votes_for.size%></div>
           <% end %>
           <% end %>
         </div>

@@ -45,19 +45,17 @@
   font-weight: bold;
   font-size: 13px;
   line-height: 20px;
-  .voted-black {
-    color: black;
-    border-bottom-color: black;
-  }
-  .voted-red{
-    color: #FC6E5E;
-    border-bottom-color: #FC6E5E;
-  }
 }
 
 .story-list-count {
   margin: 2px 0 0;
+  color: black !important;
 }
+
+.voted-red {
+  color: #FC6E5E !important;
+}
+
 .story-list-arrow {
   transition: all 0.15s ease;
   width: 0;

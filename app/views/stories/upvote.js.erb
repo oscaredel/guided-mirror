@@ -1,2 +1,9 @@
 let storyCounter = document.querySelector('div[data-id="<%= @story.id %>"]')
 storyCounter.innerText = '<%= @story.votes_for.size %>'
+
+if (storyCounter.classList.contains("voted-red")) {
+  storyCounter.classList.remove("voted-red");
+} else {
+  storyCounter.classList.add("voted-red");
+}
+
