@@ -9,4 +9,14 @@ Rails.application.routes.draw do
   get 'landmarks/nearest', to: 'landmarks#nearest', as: 'nearest_landmark'
   resources :landmarks, only: [:index, :show]
   resources :stories, only: [:index, :show, :new, :create, :destroy]
+
+  resources :stories do
+    member do
+      put "like", to: "stories#upvote"
+      put "unlike", to: "stories#unlike"
+      # put "dislike", to: "links#downvote"
+    end
+  end
+
 end
+

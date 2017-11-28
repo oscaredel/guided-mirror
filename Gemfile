@@ -15,6 +15,7 @@ gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
 gem 'plyr-rails'
 gem 'acts_as_follower'
+gem 'acts_as_votable'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"

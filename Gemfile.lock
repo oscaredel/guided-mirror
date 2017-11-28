@@ -40,6 +40,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     acts_as_follower (0.2.1)
+    acts_as_votable (0.11.1)
     arel (8.0.0)
     autoprefixer-rails (7.1.6)
       execjs
@@ -224,7 +225,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   acts_as_follower
+=======
+  acts_as_votable
+>>>>>>> master
   autoprefixer-rails
   bootstrap-sass
   carrierwave (~> 0.11.2)

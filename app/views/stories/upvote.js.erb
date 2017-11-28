@@ -1,0 +1,2 @@
+let storyCounter = document.querySelector('div[data-id="<%= @story.id %>"]')
+storyCounter.innerText = '<%= @story.votes_for.size %>'
