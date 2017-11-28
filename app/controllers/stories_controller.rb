@@ -42,7 +42,6 @@ class StoriesController < ApplicationController
     else
       @story.liked_by current_user
     end
-    redirect_to stories_path
   end
 
   # def unlike

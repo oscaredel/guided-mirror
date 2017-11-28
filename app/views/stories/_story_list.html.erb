@@ -11,9 +11,9 @@
         </div>
         <% end %>
       <div class='story-list-upvote'>
-        <%= link_to like_story_path(story), method: :put do %>
+        <%= link_to like_story_path(story), method: :put, remote: true do %>
         <div class="story-list-arrow"></div>
-        <div class='story-list-count'><%= story.votes_for.size  %></div>
+        <div class='story-list-count' data-id='<%= story.id %>'><%= story.votes_for.size  %></div>
         <% end %>
       </div>
       </div>
