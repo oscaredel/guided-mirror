@@ -16,9 +16,9 @@
       <% end %>
     </div>
     <div class="story-list-player">
-      <ul class="story-list-controls hidden-sm hidden-xs">
+      <ul class="story-list-controls">
         <% if story.audio.filename %>
-        <li><%= audio_tag(cloudinary_url(story.audio.filename.sub(/\.[^.]+\z/, '.mp3'), resource_type: :video), controls: true) %></li>
+        <%= audio_tag(cloudinary_url(story.audio.filename.sub(/\.[^.]+\z/, '.mp3'), resource_type: :video), controls: true) %>
         <% end %>
         <!--  <li><a href=""><i class="fa fa-star"></i></a></li> -->
       </ul>
