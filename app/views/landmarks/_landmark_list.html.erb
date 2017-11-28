@@ -1,24 +1,24 @@
 <div class="row">
   <% landmarks.each do |landmark| %>
-  <%= link_to landmark_path(landmark) do %>
   <div class="col-xs-12 col-md-6">
+    <%= link_to landmark_path(landmark) do %>
     <div class="card landmark-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= landmark.image %>);">
       <div class="card-description">
-
-
-
         <h2>
           <%= landmark.name %>
         </h2>
-        <p>
-
-        </p>
       </div>
     </div>
-        <%= link_to follow_landmark_path(landmark), method: :put do %>
-        <i class="fa fa-2x fa-star"></i>
-        <% end %>
+    <% end %>
+    <div class="landmark-follow-star">
+      <%= link_to follow_landmark_path(landmark), method: :put, remote: true do %>
+      <% if current_user.following?(landmark) %>
+      <i class="fa fa-fw fa-star following-star" data-id='<%= landmark.id %>'></i>
+      <% else %>
+      <i class="fa fa-fw fa-star" data-id='<%= landmark.id %>'></i>
+      <% end %>
+      <% end %>
+    </div>
   </div>
-  <% end %>
   <% end %>
 </div>
