@@ -14,9 +14,9 @@ class User < ApplicationRecord
   # The set_defaults will only work if the object is new
 
   def set_defaults
-    self.first_name  ||= ' '
-    self.last_name  ||= ' '
-    self.description  ||= ' '
+    self.first_name  ||= ''
+    self.last_name  ||= ''
+    self.description  ||= ''
     self.remote_image_url ||= 'https://res.cloudinary.com/dieter/image/upload/v1511804160/user_default_qvaoal.png'
   end
 end
