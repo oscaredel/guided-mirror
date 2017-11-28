@@ -4,6 +4,7 @@
   transition: all 0.15s ease;
   border: 1px solid rgba(0,0,0,0.05);
   flex-direction: column;
+
 }
 
 .story-list-top {
@@ -43,11 +44,22 @@
   transition: all 0.15s ease;
   font-weight: bold;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 12px;
+  width:20px;
+  display:flex;
+  // justify-content:flex-start;
+  // flex-direction: column;
 }
+
 .story-list-count {
   margin: 2px 0 0;
+  color: black !important;
 }
+
+.voted-red {
+  color: #FC6E5E !important;
+}
+
 .story-list-arrow {
   transition: all 0.15s ease;
   width: 0;
@@ -59,7 +71,6 @@
   border-radius: 2px;
   margin: auto;
 }
-
 
 /* Controls design */
 .story-list-controls {
