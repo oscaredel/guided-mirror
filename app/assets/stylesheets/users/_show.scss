@@ -17,3 +17,25 @@
 .text-align-center-div {
   text-align: center;
 }
+
+.user-follow-star {
+  position: absolute;
+  margin: 0 auto;
+  right: 25px;
+  top: 25px;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  font-size: 1.5em;
+  a {
+    color: white;
+    &:hover {
+      color: $red;
+    }
+  }
+  .following-star {
+    color: $orange;
+    &:hover{
+      color: $red;
+    }
+  }
+}
