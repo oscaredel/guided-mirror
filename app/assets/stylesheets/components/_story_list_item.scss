@@ -1,11 +1,15 @@
 .story-list {
   display: flex;
-  align-items: center;
-  padding: 20px;
   border-radius: 3px;
   transition: all 0.15s ease;
-
   border: 1px solid rgba(0,0,0,0.05);
+  flex-direction: column;
+}
+
+.story-list-top {
+  display: flex;
+  flex-grow: 1;
+  padding: 20px 20px 0px 20px;
 }
 
 /* Body design */
@@ -29,6 +33,7 @@
   border-radius: 10px;
   margin-right: 20px;
   width: 175px;
+  height: 100px;
 }
 
 /* Upvote design */
@@ -55,15 +60,15 @@
   margin: auto;
 }
 
+
 /* Controls design */
 .story-list-controls {
   display: flex;
-  align-items: center;
-  text-align: center;
   margin: 0px;
+  flex-direction: column;
+  padding: 0px;
 }
 .story-list-controls a {
-  padding: 0 20px;
   font-size: 17px;
   color: #E6E6E6;
 }
