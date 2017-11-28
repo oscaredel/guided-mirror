@@ -4,6 +4,7 @@
   transition: all 0.15s ease;
   border: 1px solid rgba(0,0,0,0.05);
   flex-direction: column;
+
 }
 
 .story-list-top {
@@ -44,7 +45,16 @@
   font-weight: bold;
   font-size: 13px;
   line-height: 20px;
+  .voted-black {
+    color: black;
+    border-bottom-color: black;
+  }
+  .voted-red{
+    color: #FC6E5E;
+    border-bottom-color: #FC6E5E;
+  }
 }
+
 .story-list-count {
   margin: 2px 0 0;
 }
@@ -59,7 +69,6 @@
   border-radius: 2px;
   margin: auto;
 }
-
 
 /* Controls design */
 .story-list-controls {

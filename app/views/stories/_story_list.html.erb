@@ -10,19 +10,24 @@
           <p><%= story.description %></p>
         </div>
         <% end %>
-      <div class='story-list-upvote'>
-        <%= link_to like_story_path(story), method: :put, remote: true do %>
-        <div class="story-list-arrow"></div>
-        <div class='story-list-count' data-id='<%= story.id %>'><%= story.votes_for.size  %></div>
-        <% end %>
-      </div>
+        <div class='story-list-upvote'>
+          <%= link_to like_story_path(story), method: :put, remote: true do %>
+          <% if current_user.voted_for? story %>
+          <div class="story-list-arrow voted-red"></div>
+          <div class='story-list-count voted-red' data-id='<%= story.id %>'><%=story.votes_for.size%></div>
+          <% else %>
+          <div class="story-list-arrow voted-black"></div>
+          <div class='story-list-count voted-black' data-id='<%= story.id %>'><%=story.votes_for.size%></div>
+          <% end %>
+          <% end %>
+        </div>
       </div>
       <div class="story-list-player">
         <ul class="story-list-controls">
           <% if story.audio.filename %>
           <%= audio_tag(cloudinary_url(story.audio.filename.sub(/\.[^.]+\z/, '.mp3'), resource_type: :video), controls: true) %>
           <% end %>
-        <!--   <li><a href=""><i class="fa fa-star"></i></a></li> -->
+          <!--   <li><a href=""><i class="fa fa-star"></i></a></li> -->
         </ul>
       </div>
     </div>
