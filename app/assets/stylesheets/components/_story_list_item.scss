@@ -44,7 +44,11 @@
   transition: all 0.15s ease;
   font-weight: bold;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 12px;
+  width:20px;
+  display:flex;
+  // justify-content:flex-start;
+  // flex-direction: column;
 }
 
 .story-list-count {
