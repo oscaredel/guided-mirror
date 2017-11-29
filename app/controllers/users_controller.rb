@@ -2,6 +2,23 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @stories = @user.stories
+    @following_landmarks = @user.following_by_type('Landmark')
+    @following_users = @user.following_by_type('User')
+
+    @feed_stories = []
+
+    @following_landmarks.each do |landmark|
+      landmark.stories.each do |story|
+        @feed_stories << story
+      end
+    end
+
+    @following_users.each do |user|
+      user.stories.each do |story|
+        @feed_stories << story unless @feed_stories.include?(story)
+      end
+    end
+    @feed_stories.sort_by!(&:created_at).reverse!
   end
 
   def update

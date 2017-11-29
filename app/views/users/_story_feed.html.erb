@@ -1,0 +1,52 @@
+<div class="row">
+  <% stories.each do |story|%>
+  <div class="col-xs-12">
+    <p>
+      <%= link_to user_path(story.user) do %>
+      <%= story.user.first_name %> <%= story.user.last_name %>
+      <% end %> added a new story for
+      <%= link_to landmark_path(story.landmark) do %>
+      <%= story.landmark.name %>
+      <% end %> on <%= story.created_at.strftime("%A, %b %d") %>
+    </p>
+    <div class="story-list">
+      <div class='story-list-top'>
+        <%= link_to story_path(story), class:"story-link" do %>
+        <%= cl_image_tag(story.image, class: "story-list-image hidden-xs") %>
+        <div class='story-list-body'>
+          <h3><%= story.title %></h3>
+          <p><%= story.description %></p>
+        </div>
+        <% end %>
+          <% unless current_user.nil? %>
+        <div class='story-list-upvote'>
+          <%= link_to like_story_path(story), method: :put, remote: true do %>
+          <!--  <div class="story-list-arrow"></div> -->
+          <% if current_user.voted_for?(story) %>
+          <div class='story-list-count voted-red' data-id='<%= story.id %>'>
+            <i class="fa fa-caret-up fa-2x" aria-hidden="true"></i>
+            <%=story.votes_for.size%></div>
+            <% else %>
+            <div class='story-list-count voted-black' data-id='<%= story.id %>'>
+              <i class="fa fa-caret-up fa-2x" aria-hidden="true"></i>
+              <%=story.votes_for.size%></div>
+              <% end %>
+              <% end %>
+            </div>
+              <% end %>
+          </div>
+          <div class="story-list-player">
+            <ul class="story-list-controls">
+              <% if story.audio.filename %>
+              <%= audio_tag(cloudinary_url(story.audio.filename.sub(/\.[^.]+\z/, '.mp3'), resource_type: :video), controls: true) %>
+              <% end %>
+              <!--   <li><a href=""><i class="fa fa-star"></i></a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+
+
