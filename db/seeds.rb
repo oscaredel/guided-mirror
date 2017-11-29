@@ -227,6 +227,30 @@ marihuana_museum = Landmark.create!(
   remote_image_url: "http://hashmuseum.com/sites/default/files/grow_on_barcelona_1.jpg"
   )
 
+schiphol = Landmark.create!(
+  name: "Schiphol Airport",
+  # lat: 52.3718,
+  # lng: 4.8969,
+  description: "Amsterdam Airport Schiphol, known informally as Schiphol, is the main international airport of the Netherlands. It is located 9 kilometres southwest of Amsterdam, in the municipality of Haarlemmermeer, North Holland",
+  city: "Schiphol",
+  postal_code: "1118 CP",
+  address: "Evert van de Beekstraat 202",
+  country: "the Netherlands",
+  remote_image_url: "http://www.travelvalley.nl/uploads/headers/tips-drukte-schiphol.jpg"
+  )
+
+palace = Landmark.create!(
+  name: "Imperial Palace",
+  # lat: 52.3718,
+  # lng: 4.8969,
+  description: "This site with scenic gardens & tours of the grounds is the main residence of the emperor of Japan.",
+  city: "Tokyo",
+  postal_code: "〒100-8111",
+  address: "Chiyoda-ku, Chiyoda, 1−１",
+  country: "Japan",
+  remote_image_url: "https://gaijinpot.scdn3.secure.raxcdn.com/wp-content/uploads/sites/6/2016/07/Tokyo-Imperial-Palace.jpg"
+  )
+
 
 # ____Stories___________________________________________
 puts "Seeding stories..."
@@ -287,7 +311,7 @@ fashion_tour = Story.create!(
   user: jackie,
   landmark: jordaan,
   title: "Fashion in the Jordaan",
-  remote_image_url: "https://www.iamsterdam.com/media/locations-ndtrc/shopping/v-c-openinghours-marie-charlotte-peze.jpg",
+  remote_image_url: "http://ohindustry.com/wp-content/uploads/2014/02/shopping-for-fashion-on-a-budget1.png",
   remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4a",
   description: "Go on a shopping spree with me, in Amsterdam's hippest district",
   language: "English",
