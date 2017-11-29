@@ -2,6 +2,12 @@
   image: "https://i0.wp.com/behindthelenscap.smugmug.com/Amsterdam/i-gPrPZck/0/ecde89d7/L/Amsterdam-kade-2-L.jpg?resize=800%2C500&ssl=1"
 } %>
 
+<!-- Count Karma -->
+<% count = 0 %>
+<% @stories.each do |story| %>
+<% count += story.votes_for.size%>
+<% end %>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-3">
@@ -12,7 +18,11 @@
           <%= @user.first_name + " " + @user.last_name %>
           <% end %>
         </h1>
+        <button type="button" class="btn btn-success">Karma <span class="badge"><%= count %></span></button>
       </div>
+
+      <br>
+
       <div>
         <%  if @user.city != nil %>
         <strong>City: </strong><%= @user.city %>
@@ -25,6 +35,7 @@
         <br>
       </div>
 
+      <!-- Buttons -->
       <%= link_to "Update user info", edit_user_registration_path, class: "btn btn-danger"  %>
       <%= link_to "Upload a new story", new_story_path, class: "btn btn-success story-upload-btn" %>
       <% unless current_user.id == @user.id %>
