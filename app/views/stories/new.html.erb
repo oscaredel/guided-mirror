@@ -19,6 +19,8 @@
   <% else %>
     <%= f.input :landmark_id, input_html: { value: @landmark.id }, as: :hidden %>
   <% end %>
+  <%= f.input :category, collection: ["Informative", "Shopping", "Comedy", "Food", "History", "Personal"] %>
+  <%= f.input :language, collection: ["English", "Dutch"] %>
   <%= f.input :image %>
   <%= f.input :image_cache, as: :hidden %>
   <%= f.input :audio %>
