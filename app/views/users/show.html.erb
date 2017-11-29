@@ -11,89 +11,117 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-3">
-      <div class="user-image" style="background-image:url('<%= image_path @user.image %>');"></div>
+      <div class="user-image" style="background-image:url('<%= image_path @user.image %>');">
+        <span class="orb">
+          <i class="fa fa-bolt"></i>
+          <span>
+            <%= count %>
+          </span>
+        </span>
+        <% if current_user.id == @user.id %>
+        <!-- Buttons -->
+        <%= link_to edit_user_registration_path, class: "btn btn-warning-round" do %>
+        <i class="fa fa-cog"></i>
+        <% end %>
+        <%= link_to new_story_path, class: "btn btn-success-round" do %>
+        <i class="fa fa-plus"></i>
+        <% end %>
+        <% end %>
+      </div>
       <div>
         <h1>
           <% if @user.first_name != nil && @user.last_name != nil %>
           <%= @user.first_name + " " + @user.last_name %>
           <% end %>
         </h1>
-        <button type="button" class="btn btn-success">Karma <span class="badge"><%= count %></span></button>
-      </div>
 
-      <br>
+<!--         <button type="button" class="btn btn-success"> <span class="badge"></span></button>
+-->      </div>
 
-      <div>
-        <%  if @user.city != nil %>
-        <strong>City: </strong><%= @user.city %>
-        <% end %>
-      </div>
-      <div>
-        <%  if @user.description != nil %>
-        <%= @user.description %>
-        <% end %>
-        <br>
-      </div>
 
-      <% if current_user.id == @user.id %>
-      <!-- Buttons -->
-      <%= link_to "Update user info", edit_user_registration_path, class: "btn btn-danger"  %>
-      <%= link_to "Upload a new story", new_story_path, class: "btn btn-success story-upload-btn" %>
-      <% end %>
+<div>
+  <%  if @user.city != nil %>
+  <h5 class="highlight-down">
+  <%= @user.city %>
 
-      <% unless current_user.id == @user.id %>
-      <div class="user-follow-star">
-        <%= link_to follow_user_path(@user), method: :put, remote: true do %>
-        <% if current_user.following?(@user) %>
-        <i class="fa fa-fw fa-star following-star" data-id='<%= @user.id %>'></i>
-        <% else %>
-        <i class="fa fa-fw fa-star" data-id='<%= @user.id %>'></i>
+  </h5>
+  <% end %>
+</div>
+<div>
+  <%  if @user.description != nil %>
+  <%= @user.description %>
+  <% end %>
+  <br>
+</div>
+<ul class="list-unstyled user-actions">
+        <% if current_user.id == @user.id %>
+        <!-- Buttons -->
+        <li>
+        <%= link_to edit_user_registration_path, class: "link-warning" do %>
+        <i class="fa fa-pencil-square-o"></i> Edit your profile
         <% end %>
+        </li>
+        <li>
+        <%= link_to new_story_path, class: "link-success" do %>
+        <i class="fa fa-plus"></i> Add a story
         <% end %>
-      </div>
-      <% end %>
+        </li>
+        <% end %>
+        </ul>
+
+<% unless current_user.id == @user.id %>
+<div class="user-follow-star">
+  <%= link_to follow_user_path(@user), method: :put, remote: true do %>
+  <% if current_user.following?(@user) %>
+  <i class="fa fa-fw fa-star following-star" data-id='<%= @user.id %>'></i>
+  <% else %>
+  <i class="fa fa-fw fa-star" data-id='<%= @user.id %>'></i>
+  <% end %>
+  <% end %>
+</div>
+<% end %>
+</div>
+<div class="col-xs-12 col-md-9">
+
+  <!-- Stories: -->
+  <div>
+    <%  if @user.first_name != nil %>
+    <h3>Stories by <%= @user.first_name %></h3>
+    <%= render 'stories/story_list', stories: @stories %>
+    <% end %>
+
+  </div>
+
+
+  <div>
+    <h3>Story feed</h3>
+    <%= render 'story_feed', stories: @feed_stories %>
+  </div>
+
+  <!-- Following landmarks/users -->
+  <div>
+    <div>
+      <h3>Following Landmarks</h3>
+      <%= render 'landmarks/landmark_list', landmarks: @following_landmarks %>
     </div>
-    <div class="col-xs-12 col-md-9">
 
-      <!-- Stories: -->
-      <div>
-        <%  if @user.first_name != nil %>
-        <h3>Stories by <%= @user.first_name %></h3>
-        <%= render 'stories/story_list', stories: @stories %>
+    <div>
+      <h3>Following Storytellers</h3>
+      <ul class="list-inline">
+        <% @following_users.each do |user| %>
+        <li>
+          <%= link_to user do %>
+          <div class="class=list-inline-item user-image following-storyteller" style="background-image:url('<%= image_path user.image %>');"></div>
+          <% end %>
+        </li>
         <% end %>
-
-      </div>
-
-
-      <div>
-          <h3>Story feed</h3>
-          <%= render 'story_feed', stories: @feed_stories %>
-      </div>
-
-      <!-- Following landmarks/users -->
-      <div>
-        <div>
-          <h3>Following Landmarks</h3>
-          <%= render 'landmarks/landmark_list', landmarks: @following_landmarks %>
-        </div>
-
-        <div>
-          <h3>Following Storytellers</h3>
-          <ul class="list-inline">
-            <% @following_users.each do |user| %>
-            <li>
-              <%= link_to user do %>
-              <div class="class=list-inline-item user-image following-storyteller" style="background-image:url('<%= image_path user.image %>');"></div>
-              <% end %>
-            </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-
-
+      </ul>
     </div>
   </div>
+
+
+</div>
+</div>
 
 </div>
 

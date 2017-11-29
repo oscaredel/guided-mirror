@@ -49,8 +49,44 @@
   transform: scale(1);
   transition: transform 200ms ease;
   &:hover {
-      transform: scale(1.05);
+    transform: scale(1.05);
     color: white;
     text-decoration: none;
   }
 }
+
+.btn-warning-round {
+  color: $brand-warning;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  border: 3px solid $brand-warning;
+}
+
+.btn-success-round {
+  color: $brand-success;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  border: 3px solid $brand-success;
+}
+
+.link-success {
+  text-decoration: none;
+  color: $brand-success;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.link-warning {
+  text-decoration: none;
+  color: $brand-warning;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+
+
