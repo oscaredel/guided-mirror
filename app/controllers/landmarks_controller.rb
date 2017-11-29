@@ -39,7 +39,7 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.find_by_id(params[:id])
     @stories = @landmark.stories
     @nearby_landmarks = @landmark.nearbys.first(2)
-    @markers = Gmaps4rails.build_markers(@nearby_landmarks) do |landmark, marker|
+    @markers = Gmaps4rails.build_markers(@nearby_landmarks << @landmark) do |landmark, marker|
       marker.lat landmark.lat
       marker.lng landmark.lng
       marker.infowindow "<div class='marker-card'> <a class='marker-link' href='#{landmark_path(landmark)}'>
