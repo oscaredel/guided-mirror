@@ -27,6 +27,7 @@
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :description %>
+    <%= f.input :prefered_language, collection: ["English", "Dutch"] %>
     <%= f.input :image, label: "Profile picture:" %>
     <%= f.input :image_cache, as: :hidden %>
 

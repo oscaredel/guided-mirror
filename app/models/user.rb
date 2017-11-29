@@ -20,6 +20,7 @@ class User < ApplicationRecord
     self.first_name  ||= ''
     self.last_name  ||= ''
     self.description  ||= ''
+    self.prefered_language ||= 'English'
     self.remote_image_url ||= 'https://res.cloudinary.com/dieter/image/upload/v1511804160/user_default_qvaoal.png'
   end
 end
