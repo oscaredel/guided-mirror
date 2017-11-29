@@ -18,7 +18,7 @@ class LandmarksController < ApplicationController
 
   def nearest
     coordinates = params[:coord] ? params[:coord].map(&:to_f) : nil
-    @landmarks = Landmark.near(coordinates).first(5)
+    @landmarks = Landmark.near(coordinates, 1000000).first(5)
     @nearest_landmark = @landmarks.first
     @stories = @nearest_landmark.stories
 
