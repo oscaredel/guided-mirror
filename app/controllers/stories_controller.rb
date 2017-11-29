@@ -1,6 +1,15 @@
 class StoriesController < ApplicationController
   def index
     @stories = Story.all
+
+    sorted = @stories.sort_by { |story| story.votes_for.size }
+    sorted = sorted.reverse
+
+  # Loop
+    current_language = sorted.select {|story| story.language == "Dutch"}
+    other_languages = sorted.select {|story| story.language != "Dutch"}
+    @all_languages = current_language + other_languages
+
   end
 
   def show
