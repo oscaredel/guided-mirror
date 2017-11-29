@@ -5,7 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Guided - Everyone is a storyteller</title>
   <%= favicon_link_tag 'favicon.png' %>
+
+  <!-- iOS WEB-APP -->
   <%= favicon_link_tag 'guided_icon.png', :rel => 'apple-touch-icon', :type => 'image/png' %>
+  <meta name="apple-mobile-web-app-title" content="Guided Club">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <!-- END iOS WEB-APP -->
+
+
   <%= csrf_meta_tags %>
   <%= action_cable_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
