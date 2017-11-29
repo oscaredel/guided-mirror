@@ -63,20 +63,31 @@
         <% end %>
 
       </div>
+
+
+      <div>
+          <h3>Story feed</h3>
+          <%= render 'story_feed', stories: @feed_stories %>
+      </div>
+
+      <!-- Following landmarks/users -->
       <div>
         <div>
-          <h3>Landmarks followed</h3>
-          <%= render 'landmarks/landmark_list', landmarks: @user.following_by_type('Landmark') %>
+          <h3>Following Landmarks</h3>
+          <%= render 'landmarks/landmark_list', landmarks: @following_landmarks %>
         </div>
+
         <div>
-          <h3>Users followed</h3>
-
-
-          <% @user.following_by_type('User').each do |user| %>
-          <%= link_to user_path(user) do %>
-          <%= user.first_name + " " + user.last_name %>
-          <% end %>
-          <% end %>
+          <h3>Following Storytellers</h3>
+          <ul class="list-inline">
+            <% @following_users.each do |user| %>
+            <li>
+              <%= link_to user do %>
+              <div class="class=list-inline-item user-image following-storyteller" style="background-image:url('<%= image_path user.image %>');"></div>
+              <% end %>
+            </li>
+            <% end %>
+          </ul>
         </div>
       </div>
 

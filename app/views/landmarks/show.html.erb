@@ -25,7 +25,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2>Other landmarks near <%= @landmark.name %></h2>
-        <%= render 'landmark_list', landmarks: @nearby_landmarks %>
+        <%= render 'landmark_list', landmarks: @nearby_landmarks.first(2) %>
       </div>
     </div>
     <div class="col-xs-12 col-lg-12">
