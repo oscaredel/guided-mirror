@@ -39,7 +39,7 @@ class LandmarksController < ApplicationController
     @landmark = Landmark.find_by_id(params[:id])
     @stories = @landmark.stories
     @nearby_landmarks = @landmark.nearbys.first(2)
-    @landmarks_for_map = @nearby_landmarks << @landmark
+    @landmarks_for_map = @nearby_landmarks + @landmark
     @markers = Gmaps4rails.build_markers(@landmarks_for_map) do |landmark, marker|
       marker.lat landmark.lat
       marker.lng landmark.lng
