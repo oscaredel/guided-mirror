@@ -80,9 +80,27 @@
   <% end %>
 </div>
 <% end %>
-</div>
-<div class="col-xs-12 col-md-9">
 
+<% if current_user.id == @user.id %>
+  <!-- Stories: -->
+  <div class="current-user-stories">
+    <%  if @user.first_name != nil %>
+    <h3>Your Stories</h3>
+    <%= render 'stories/story_list', stories: @stories %>
+    <% end %>
+    <% if @user.stories.count == 0 %>
+      <p>
+        You have not told a story yet.
+      </p>
+    <% end %>
+  </div>
+  <% end %>
+</div>
+
+
+
+<div class="col-xs-12 col-md-9">
+  <% unless current_user.id == @user.id %>
   <!-- Stories: -->
   <div>
     <%  if @user.first_name != nil %>
@@ -91,18 +109,31 @@
     <% end %>
 
   </div>
+  <% end %>
 
 
+  <% if current_user.id == @user.id %>
   <div>
     <h3>Story feed</h3>
     <%= render 'story_feed', stories: @feed_stories %>
+  <% if @feed_stories.count == 0 %>
+    <p>
+      New stories about landmarks or from users you are following will show up here.
+    </p>
+  <% end %>
   </div>
+
 
   <!-- Following landmarks/users -->
   <div>
     <div>
       <h3>Following Landmarks</h3>
       <%= render 'landmarks/landmark_list', landmarks: @following_landmarks %>
+      <% if @following_landmarks.count == 0 %>
+        <p>
+          Start following <%= link_to landmarks_path do %>some landmarks <% end %> you are interested in.
+        </p>
+      <% end %>
     </div>
 
     <div>
@@ -116,8 +147,15 @@
         </li>
         <% end %>
       </ul>
+      <% if @following_users.count == 0 %>
+        <p>
+          Start following <%= link_to stories_path do %>other storytellers <% end %>you are interested in.
+        </p>
+      <% end %>
+    </div>
     </div>
   </div>
+  <% end %>
 
 
 </div>
