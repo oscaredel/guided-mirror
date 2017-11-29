@@ -8,6 +8,8 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
+
+#Own gems
 gem 'geocoder'
 gem "coffee-rails"
 gem "gmaps4rails"
@@ -16,6 +18,7 @@ gem 'carrierwave', '~> 0.11.2'
 gem 'plyr-rails'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 gem 'acts_as_votable'
+gem 'social-share-button'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
