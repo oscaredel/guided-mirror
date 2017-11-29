@@ -10,6 +10,7 @@
           <p><%= story.description %></p>
         </div>
         <% end %>
+          <% unless current_user.nil? %>
         <div class='story-list-upvote'>
           <%= link_to like_story_path(story), method: :put, remote: true do %>
           <!--  <div class="story-list-arrow"></div> -->
@@ -24,6 +25,7 @@
               <% end %>
               <% end %>
             </div>
+              <% end %>
           </div>
           <div class="story-list-player">
             <ul class="story-list-controls">
