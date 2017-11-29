@@ -20,7 +20,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-6 landmarkshow-content">
       <%= render partial: 'info_column_left', locals: { story: @story } %>
-      <%= social_share_button_tag(@story.title, desc: @story.description) %>
+      <%= social_share_button_tag(@story.title, desc: @story.description, image: @story.image_url,) %>
 
     </div>
     <div class="col-xs-12 col-sm-6 landmarkshow-content">
