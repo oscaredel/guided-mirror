@@ -7,6 +7,12 @@
   background-position: center;
   margin-top: 20px;
   margin-left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  .btn-warning-round{
+    margin-right: 10px;
+  }
 }
 
 .story-upload-btn {
@@ -43,4 +49,21 @@
 .following-storyteller {
   height: 100px;
   width: 100px;
+}
+
+.highlight-down {
+  color: gray;
+}
+
+ul.user-actions {
+  li {
+    margin: 10px 0;
+    a {
+      display: flex;
+      align-items: center;
+      .fa {
+        flex: 0 0 27px;
+      }
+    }
+  }
 }
