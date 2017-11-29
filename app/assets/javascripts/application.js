@@ -7,6 +7,8 @@
 //= require gmaps/google
 //= require plyr
 //= require_tree .
+//= require social-share-button
+
 
 $(".alert" ).fadeOut(3000);
 
