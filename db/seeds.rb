@@ -86,7 +86,7 @@ dieter = User.create!(
   email: "dieter@gmail.com",
   password: '123456',
   remote_image_url: "https://avatars2.githubusercontent.com/u/16388834?s=460&v=4",
-  city: "Nijmegen"
+  city: "Nijmegen",
   description: "Coding student in Amsterdam @Le Wagon. I like dinosaurs."
   )
 
@@ -96,7 +96,7 @@ bennie = User.create!(
   email: "Bennie@gmail.com",
   password: '123456',
   remote_image_url: "http://i.dailymail.co.uk/i/pix/2007/08_01/davewestES_468x383.jpg",
-  city: "Amsterdam"
+  city: "Amsterdam",
   description: "I work at the oldest bar of Amsterdam. I could write a book about all that happens here, but I don't want to. Instead, I'll tell you about it here. Come visit our bar sometime."
   )
 
@@ -106,7 +106,7 @@ feiko = User.create!(
   email: "feiko@gmail.com",
   password: '123456',
   remote_image_url: "https://photos-2.dropbox.com/t/2/AABVakf7jgTzqYp-tmuuGGm3HsCobpTyb4DTuJ4tJw8u4g/12/1123338/jpeg/32x32/3/1512075600/0/2/_DSF1014.jpg/EI-Qfhj46rsuIAIoAg/02-4O190yk7BOCcgN1Dcw92o8KI56nb81VGIrFmnjM4?dl=0&size=2048x1536&size_mode=3",
-  city: "Amsterdam"
+  city: "Amsterdam",
   description: "Driver Le Wagon Netherlands"
   )
 
@@ -118,7 +118,7 @@ feiko = User.create!(
   email: "priest@gmail.com",
   password: '123456',
   remote_image_url: "http://www.arjanbroers.nl/wp-content/uploads/2017/02/MoutBierfestival4.jpg",
-  city: "Amsterdam"
+  city: "Amsterdam",
   description: "Priest in Amsterdam. I have some stories to share about God, life, and beer. Yes, beer."
   )
 
@@ -128,7 +128,7 @@ sanne = User.create!(
   email: "sanne@gmail.com",
   password: '123456',
   remote_image_url: "https://ak3.picdn.net/shutterstock/videos/12665933/thumb/1.jpg",
-  city: "Amsterdam"
+  city: "Amsterdam",
   description: "I'm a student of Journalism at the UvA. I love hearing people's stories so I try to interview interesting people I meet in Amsterdam"
   )
 
@@ -137,8 +137,8 @@ piet = User.create!(
   last_name: " ",
   email: "piet@gmail.com",
   password: '123456',
-  remote_image_url: "http://www.consultancy.nl/media/Kapitein-van-een-schip-20168.jpg",
-  city: "Amsterdam"
+  remote_image_url: "https://res.cloudinary.com/dieter/image/upload/v1512060054/Screen_Shot_2017-11-30_at_17.39.33_rowags.png",
+  city: "Amsterdam",
   description: "Captain of a ship for over 30 years now. Based in Amsterdam"
   )
 
@@ -148,7 +148,7 @@ mia = User.create!(
   email: "mia@gmail.com",
   password: '123456',
   remote_image_url: "https://images.pexels.com/photos/185517/pexels-photo-185517.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb",
-  city: "Amsterdam"
+  city: "Amsterdam",
   description: "I work in the red-light district in Amsterdam. Ever wanted to know what that's like? Listen to my stories."
   )
 
@@ -158,7 +158,7 @@ dwight = User.create!(
   email: "dwight@gmail.com",
   password: '123456',
   remote_image_url: "https://www.funx.nl/images/2016/11/03_70_dwight.png",
-  city: "Amsterdam"
+  city: "Amsterdam",
   description: "Police officer. Amsterdam. Indische Buurt."
   )
 
@@ -426,7 +426,7 @@ film_location_tour = Story.create!(
   landmark: eye_film_museum,
   title: "Famous film locations in Amsterdam",
   remote_image_url: "http://2.bp.blogspot.com/-X3ct7WegdbY/VOSO2oJD8PI/AAAAAAAAAZo/v5bCxX0Vn84/s1600/KLPAhOj8xEbpS.gif",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4a",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "Walk with me past all places movies have been shot in Amsterdam",
   language: "English",
   category: "Informative",
@@ -439,7 +439,7 @@ military_tour = Story.create!(
   landmark: dam_square,
   title: "Dutch military history",
   remote_image_url: "https://lh4.ggpht.com/55brX12p5OMBrusqfxi6oBP8tVQ8Vpst922Or5yzgMwRC07_8I1m8rQMwSzCO0d2gk3g6Eq1oDTu0hRHL-_w-SgbQlY=s800",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4a",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "Some ass-kicking stories about the Dutch wars with the British, Spanish and Germans",
   language: "English",
   category: "History",
@@ -452,7 +452,7 @@ cooking_tour = Story.create!(
   landmark: jordaan,
   title: "Shop & Snack in the Jordaan",
   remote_image_url: "https://dwjt-dontworryjusttra.netdna-ssl.com/wp-content/uploads/2015/03/Discover-17-Netherlands-food-specialties-in-Amsterdam_febo-Netherlands-fast-food.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4a",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "Walk the streets of the Jordaan and learn all about where to find the best meat and cheese in Amsterdam. Delicious!",
   language: "English",
   category: "Food",
@@ -465,7 +465,7 @@ weed_stories = Story.create!(
   landmark: marihuana_museum,
   title: "Weed stories",
   remote_image_url: "http://mmjreporter.com/wp-content/uploads/2017/10/Coffee-Shops-in-Amsterdam.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4a",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "I don't know, man",
   language: "English",
   category: "Comedy",
@@ -478,7 +478,7 @@ fashion_tour = Story.create!(
   landmark: jordaan,
   title: "Fashion in the Jordaan",
   remote_image_url: "http://ohindustry.com/wp-content/uploads/2014/02/shopping-for-fashion-on-a-budget1.png",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4a",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "Go on a shopping spree with me, in Amsterdam's hippest district",
   language: "English",
   category: "Shopping",
@@ -491,7 +491,7 @@ film_stories = Story.create!(
   landmark: eye_film_museum,
   title: "What to see in the film museum",
   remote_image_url: "https://willmsworks.net/en/wp-content/uploads/2013/09/In-the-Movies_Beitrag.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4a",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "The film museum is amazing and you learn all about old movies and history and stuff and I will teach too because I saw a lot of movies",
   language: "English",
   category: "Informative",
@@ -504,8 +504,8 @@ clown_story = Story.create!(
   landmark: aepjen,
   title: "What happens when 3 drunk tourists and a couple of clowns walk into your bar",
   remote_image_url:  "http://pipelinetheatre.org/wp-content/uploads/2014/02/Gala-Image.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
-  description: "http://pipelinetheatre.org/wp-content/uploads/2014/02/Gala-Image.jpg",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
+  description: "Yeah the title sound like a joke. The cleaning up after wasn't a joke.",
   language: "English",
   category: "Comedy",
   lat:52.3600,
@@ -517,8 +517,8 @@ smoking_policy = Story.create!(
   landmark: aepjen,
   title: "Our solution to the smoking ban",
   remote_image_url:  "https://at5.s3-eu-west-1.amazonaws.com/data/cache/at5/basedata/pf_image/1329473267-32ba582f.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
-  description: "http://pipelinetheatre.org/wp-content/uploads/2014/02/Gala-Image.jpg",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
+  description: "It didn't end well..",
   language: "English",
   category: "Comedy",
   lat:52.3600,
@@ -530,8 +530,8 @@ jongste_dief = Story.create!(
   landmark: indische_buurt,
   title: "Youngest thief ever",
   remote_image_url: "http://2.bp.blogspot.com/_MsXjKlVwry0/TM7IKkMR95I/AAAAAAAAAxI/WGhlmy6Bf5s/s1600/DSCF0138.JPG",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
-  description: "Young shoplifter hoards candy",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
+  description: "Young shoplifter hoards candy, we caught him, but this is not really why I became a police officer",
   language: "English",
   category: "Informative",
   lat:52.3600,
@@ -543,8 +543,8 @@ conversations = Story.create!(
   landmark: indische_buurt,
   title: "Converstations with neighbours",
   remote_image_url: "https://www.vn.nl/wp-content/uploads/sites/3/2014/01/3e0e2f40-1355-4183-a1da-df7b2e136877_java12.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
-  description: "Young shoplifter hoards candy",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
+  description: "As a police officer you meet all kinds of people. This is a collection of fun talks with people in the Indische Buurt, Amsterdam",
   language: "English",
   category: "Informative",
   lat:52.3600,
@@ -556,8 +556,8 @@ trappist = Story.create!(
   landmark: aepjen,
   title: "Godly history of Trappist beer",
   remote_image_url: "http://farm5.static.flickr.com/4019/4571490807_cc0d1c90ac.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
-  description: "",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
+  description: "Trappisten beer is the best beer in the world. It is because it's powered by the holy spirit",
   language: "English",
   category: "History",
   lat:52.3600,
@@ -569,8 +569,8 @@ god = Story.create!(
   landmark: oude_kerk,
   title: "Fun talks with people about god, in a bar",
   remote_image_url: "http://www.arjanbroers.nl/wp-content/uploads/2017/02/6-Mobile-pub-with-sister-Holkje-1024x683.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
-  description: "Have you ever noticed there is a bar next to every church. There is a reason for that.",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
+  description: "Have you ever noticed there is a bar next to every church? There is a reason for that.",
   language: "English",
   category: "Informative",
   lat:52.3600,
@@ -582,7 +582,7 @@ interview1 = Story.create!(
   landmark: portuguese_synagogue,
   title: "Interview met mijn oma over het leven in Amsterdam gedurende de 2e Wereld Oorlog",
   remote_image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI1uRe3iX6kC_5yoQhXRLWJxmMlVLcfYSDyhdPWSord_9mH0Sg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "Lang gesprek met oma over haar jeugd als een joods meisje in Amsterdam in de jaren 40",
   language: "Dutch",
   category: "History",
@@ -593,9 +593,9 @@ interview1 = Story.create!(
 interview2 = Story.create!(
   user: sanne,
   landmark: jordaan,
-  title: "Gesprek met Sjonne, bekend van zijn straatkrantjes",
+  title: "Gesprek met Sjonnie, bekend van zijn straatkrantjes",
   remote_image_url: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Straatnieuws_seller_in_Zoetermeer_2008.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "Erg grappig gesprek met Sjonnie, deze man heeft wat meegemaakt",
   language: "Dutch",
   category: "Comedy",
@@ -608,7 +608,7 @@ interview3 = Story.create!(
   landmark: jordaan,
   title: "In gesprek met een paar Marokaanse jongens in Amsterdam",
   remote_image_url: "https://nos.nl/data/image/2016/03/26/268577/xxl.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "Leuk gesprek met een paar jongens en hun vriend uit Marokko",
   language: "Dutch",
   category: "Informative",
@@ -620,9 +620,9 @@ interview3 = Story.create!(
 zwaarste_nacht_op_zee = Story.create!(
   user: piet,
   landmark: port_amsterdam,
-  title: "Just had the weirdest night at sea",
+  title: "The scariest night at sea",
   remote_image_url: "https://i.imgur.com/D63VN1z.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "30 years in this trade, all the latest instruments, and still I managed to get lost",
   language: "English",
   category: "Informative",
@@ -634,8 +634,8 @@ lewagon = Story.create!(
   user: feiko,
   landmark: alab,
   title: "History of A-Lab",
-  remote_image_url: "https://www.dropbox.com/sh/g39jwm8xj3vk9uu/AAC21Y28YLXytDvdpk8hcmaca/color?dl=0&preview=_DSF0738.jpg",
-  remote_audio_url: "http://res.cloudinary.com/dieter/video/upload/v1511434243/kgyrd5day1jkfru6qwb1.m4",
+  remote_image_url: "https://www.dropbox.com/home/Le_Wagon_Amsterdam_Batch99/color?preview=_DSF0738.jpg",
+  remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "Short history of A-Lab, now a creative hub",
   language: "English",
   category: "Informative",
