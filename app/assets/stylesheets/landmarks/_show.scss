@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
+  padding-top: 70px;
 }
 .landmarkshow-banner h1 {
   font-size: 50px;
@@ -30,4 +31,15 @@
 .add-story {
   text-align: center;
   margin: 20px;
+}
+
+.new-nearest-story-button {
+  text-align: center;
+}
+
+.landmark-show-follow-star {
+  position: relative;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
