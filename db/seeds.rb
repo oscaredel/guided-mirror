@@ -616,7 +616,6 @@ interview3 = Story.create!(
   lng:4.8852
   )
 
-
 zwaarste_nacht_op_zee = Story.create!(
   user: piet,
   landmark: port_amsterdam,
