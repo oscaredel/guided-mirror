@@ -11,16 +11,16 @@
           <h3><%= story.title %>
 
           </h3>
-            <p class="language">
+          <p class="language">
             <i class="fa fa-fw fa-globe" aria-hidden="true"></i>
-              <%= story.language %>
-            </p>
+            <%= story.language %>
+          </p>
           <p><%= story.description %></p>
         </div>
         <% end %>
         <% unless current_user.nil? %>
+        <%= link_to like_story_path(story), method: :put, remote: true do %>
         <div class='story-list-upvote'>
-          <%= link_to like_story_path(story), method: :put, remote: true do %>
           <!--  <div class="story-list-arrow"></div> -->
           <% if current_user.voted_for?(story) %>
           <div class='story-list-count voted-red' data-id='<%= story.id %>'>
@@ -31,8 +31,8 @@
               <i class="fa fa-caret-up fa-2x" aria-hidden="true"></i>
               <%=story.votes_for.size%></div>
               <% end %>
-              <% end %>
             </div>
+            <% end %>
             <% end %>
           </div>
           <div class="story-list-player">

@@ -2,6 +2,7 @@
   color: white;
   text-align: center;
   height: 40vh;
+  min-height: 300px;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   background-position: center;
@@ -25,4 +26,8 @@
 
 .landmarkshow-content {
   margin-top: 10px;
+}
+.add-story {
+  text-align: center;
+  margin: 20px;
 }
