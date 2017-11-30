@@ -634,7 +634,7 @@ lewagon = Story.create!(
   user: feiko,
   landmark: alab,
   title: "History of A-Lab",
-  remote_image_url: "https://www.dropbox.com/home/Le_Wagon_Amsterdam_Batch99/color?preview=_DSF0738.jpg",
+  remote_image_url: "https://res.cloudinary.com/dieter/image/upload/v1512060604/Screen_Shot_2017-11-30_at_17.49.16_ouogz4.png",
   remote_audio_url: "https://res.cloudinary.com/dieter/video/upload/v1512059423/cffll8calud3crymdzca_xwkglv.mp3",
   description: "Short history of A-Lab, now a creative hub",
   language: "English",
