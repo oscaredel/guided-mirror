@@ -6,8 +6,13 @@ class StoriesController < ApplicationController
     sorted = sorted.reverse
 
   # Loop
-    current_language = sorted.select {|story| story.language == "Dutch"}
-    other_languages = sorted.select {|story| story.language != "Dutch"}
+    if current_user != nil
+      current_language = sorted.select {|story| story.language == current_user.prefered_language}
+      other_languages = sorted.select {|story| story.language != current_user.prefered_language}
+    else
+      current_language = sorted.select {|story| story.language == "English"}
+      other_languages = sorted.select {|story| story.language != "English"}
+    end
     @all_languages = current_language + other_languages
 
   end

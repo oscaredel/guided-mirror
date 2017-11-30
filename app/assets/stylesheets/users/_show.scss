@@ -15,6 +15,18 @@
   }
 }
 
+@media(max-width: 768px) {
+  .user-bio-profile {
+   text-align: center;
+   .user-image {
+    margin: 20px auto;
+   }
+   .header-with-item {
+    margin: 0 auto;
+   }
+  }
+}
+
 .story-upload-btn {
   // margin: 20px;
   margin-top: 40px;
@@ -24,16 +36,23 @@
   text-align: center;
 }
 
+.header-with-item {
+  position: relative;
+  max-width: 210px;
+}
+
 .user-follow-star {
-  position: absolute;
+  // position: absolute;
   margin: 0 auto;
-  right: 25px;
-  top: 25px;
-  color: white;
-  text-shadow: 2px 2px 5px black;
-  font-size: 1.5em;
+  // right: 25px;
+  // top: 25px;
+      position: absolute;
+    top: 0;
+    right: 0;
+  // text-shadow: 2px 2px 4px gray;
+  font-size: 0.5em;
   a {
-    color: white;
+  color: gray;
     &:hover {
       color: $red;
     }

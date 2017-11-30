@@ -36,10 +36,6 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-  def user_params
-    params.require(:user).permit(:first_name, :last_name, :description, :image, :email, :password, :password_confirmation, :prefered_language)
-  end
-
   def follow
     @user = User.find(params[:id])
     if current_user.following?(@user)
@@ -48,4 +44,12 @@ class UsersController < ApplicationController
       current_user.follow(@user)
     end
   end
+
+  private
+
+  # Look in registrations_controller for settings on updating user!
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :description, :image, :email, :password, :password_confirmation, :prefered_language)
+  end
+
 end
