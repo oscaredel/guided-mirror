@@ -19,10 +19,12 @@
     <div class="col-xs-12">
 
       <%= render 'stories/story_list', stories: @stories %>
+      <div class="add-story">
 
-    <%= link_to new_story_path(landmark: @landmark.id), class: "link-success" do %>
-      <i class="fa fa-plus"></i> Add a story
-    <% end %>
+        <%= link_to new_story_path(landmark: @landmark.id), class: "link-success" do %>
+        <i class="fa fa-plus"></i> Add a story
+        <% end %>
+      </div>
     </div>
 
     <div class="row">
