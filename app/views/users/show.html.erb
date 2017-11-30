@@ -13,6 +13,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-3">
+      <div class="user-bio-profile">
       <div class="user-image" style="background-image:url('<%= image_path @user.image %>');">
         <span class="orb">
           <i class="fa fa-bolt"></i>
@@ -20,21 +21,24 @@
             <%= count %>
           </span>
         </span>
-        <% if current_user.id == @user.id %>
-        <!-- Buttons -->
-        <%= link_to edit_user_registration_path, class: "btn btn-warning-round" do %>
-        <i class="fa fa-cog"></i>
-        <% end %>
-        <%= link_to new_story_path, class: "btn btn-success-round" do %>
-        <i class="fa fa-plus"></i>
-        <% end %>
-        <% end %>
+
       </div>
       <div>
-        <h1>
+        <h1 class="header-with-item">
           <% if @user.first_name != nil && @user.last_name != nil %>
           <%= @user.first_name + " " + @user.last_name %>
           <% end %>
+          <% unless current_user.id == @user.id %>
+<div class="user-follow-star">
+  <%= link_to follow_user_path(@user), method: :put, remote: true do %>
+  <% if current_user.following?(@user) %>
+  <i class="fa fa-fw fa-star following-star" data-id='<%= @user.id %>'></i>
+  <% else %>
+  <i class="fa fa-fw fa-star" data-id='<%= @user.id %>'></i>
+  <% end %>
+  <% end %>
+</div>
+<% end %>
         </h1>
 
 <!--         <button type="button" class="btn btn-success"> <span class="badge"></span></button>
@@ -71,17 +75,7 @@
         <% end %>
         </ul>
 
-<% unless current_user.id == @user.id %>
-<div class="user-follow-star">
-  <%= link_to follow_user_path(@user), method: :put, remote: true do %>
-  <% if current_user.following?(@user) %>
-  <i class="fa fa-fw fa-star following-star" data-id='<%= @user.id %>'></i>
-  <% else %>
-  <i class="fa fa-fw fa-star" data-id='<%= @user.id %>'></i>
-  <% end %>
-  <% end %>
-</div>
-<% end %>
+
 
 <% if current_user.id == @user.id %>
   <!-- Stories: -->
@@ -97,6 +91,7 @@
     <% end %>
   </div>
   <% end %>
+ </div>
 </div>
 
 
