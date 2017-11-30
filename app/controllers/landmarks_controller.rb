@@ -1,4 +1,5 @@
 class LandmarksController < ApplicationController
+  # skip_before_action :authenticate_user!
   def index
     coordinates = params[:coord] ? params[:coord].map(&:to_f) : nil
     @landmarks = coordinates.nil? ? Landmark.all : Landmark.near(coordinates, 1.3)

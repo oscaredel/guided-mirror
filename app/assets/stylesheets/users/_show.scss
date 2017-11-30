@@ -65,6 +65,16 @@
   }
 }
 
+.story-feed-item {
+  border-top: 1px solid lightgrey;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &:first-of-type {
+    border-top: none;
+  }
+}
+
+
 .following-storyteller {
   height: 100px;
   width: 100px;

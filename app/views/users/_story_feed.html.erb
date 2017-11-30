@@ -1,6 +1,6 @@
 <div class="row">
   <% stories.each do |story|%>
-  <div class="col-xs-12">
+  <div class="col-xs-12 story-feed-item">
     <p>
       <%= link_to user_path(story.user) do %>
       <%= story.user.first_name %> <%= story.user.last_name %>

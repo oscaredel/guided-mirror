@@ -20,9 +20,10 @@
 
       <%= render 'stories/story_list', stories: @stories %>
 
+    <%= link_to new_story_path(landmark: @landmark.id), class: "link-success" do %>
+      <i class="fa fa-plus"></i> Add a story
+    <% end %>
     </div>
-
-    <%= link_to "Add a new story", new_story_path(landmark: @landmark.id), class: "btn btn-success story-upload-btn" %>
 
     <div class="row">
       <div class="col-xs-12">
