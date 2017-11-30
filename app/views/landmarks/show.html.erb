@@ -8,7 +8,6 @@
   </div>
 </div>
 
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-lg-6 landmarkshow-content">
@@ -21,9 +20,15 @@
       <%= render 'stories/story_list', stories: @stories %>
       <div class="add-story">
 
+    <% if current_user != nil %>
         <%= link_to new_story_path(landmark: @landmark.id), class: "link-success" do %>
         <i class="fa fa-plus"></i> Add a story
         <% end %>
+    <% else %>
+    <%= link_to new_user_session_path, class: "link-success" do %>
+        <i class="fa fa-plus"></i> Add a story
+        <% end %>
+    <% end %>
       </div>
     </div>
 

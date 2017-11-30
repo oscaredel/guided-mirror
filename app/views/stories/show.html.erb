@@ -9,15 +9,6 @@
 </div>
 
 <div class="container relative-container">
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
-      <% if @story.user == current_user %>
-      <%= link_to story_path(@story), method: :delete, class: "btn trash-button" do %>
-      <i class="fa fa-trash"></i>
-      <% end %>
-      <% end %>
-    </div>
-  </div>
 
   <div class="row">
     <div class="col-xs-12 col-sm-6 landmarkshow-content">
@@ -33,6 +24,16 @@
       <%= audio_tag(cloudinary_url(@story.audio.filename.sub(/\.[^.]+\z/, '.mp3'), resource_type: :video), controls: true) %>
       <% end %>
 
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-8">
+      <% if @story.user == current_user %>
+      <%= link_to story_path(@story), method: :delete, class: "btn trash-button" do %>
+      <i class="fa fa-trash"></i>
+      <% end %>
+      <% end %>
     </div>
   </div>
 

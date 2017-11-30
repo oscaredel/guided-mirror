@@ -27,8 +27,16 @@
 
     </div>
 
-    <div class="col-xs-12">
-      <%= link_to "Add a new story", new_story_path(landmark: @nearest_landmark.id), class: "btn btn-success story-upload-btn" %>
+    <div class="col-xs-12 new-nearest-story-button">
+    <% if current_user != nil %>
+        <%= link_to new_story_path(landmark: @nearest_landmark.id), class: "link-success" do %>
+        <i class="fa fa-plus"></i> Add a story
+        <% end %>
+    <% else %>
+    <%= link_to new_user_session_path, class: "link-success" do %>
+        <i class="fa fa-plus"></i> Add a story
+        <% end %>
+    <% end %>
     </div>
   </div>
   <div class="row">
