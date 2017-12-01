@@ -95,7 +95,6 @@ ul.user-actions {
       display: flex;
       align-items: center;
 
-  justify-content: center;
       .fa {
         flex: 0 0 27px;
       }
@@ -104,10 +103,9 @@ ul.user-actions {
 }
 
 .user-actions-list {
-  text-align: center;
-  justify-content: center;
-  align-items:center;
-
+  // text-align: center;
+  // justify-content: center;
+  // align-items:center;
 }
 
 .current-user-stories img {

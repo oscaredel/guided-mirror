@@ -8,3 +8,8 @@ a:hover a:active {
   text-decoration: none;
   color: #fb412c;
 }
+
+a:-webkit-any-link {
+    cursor: auto;
+    text-decoration: none;
+}
