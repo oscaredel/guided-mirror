@@ -16,7 +16,16 @@ class StoriesController < ApplicationController
       other_languages = sorted.select {|story| story.language != "English"}
     end
     @all_languages = current_language + other_languages
+  end
 
+  def edit
+    @story = Story.find(params[:id])
+  end
+
+  def update
+    @story = Story.find(params[:id])
+    @story.update(story_params)
+    redirect_to story_path(@story)
   end
 
   def show
@@ -59,12 +68,6 @@ class StoriesController < ApplicationController
       @story.liked_by current_user
     end
   end
-
-  # def unlike
-  #   @story = Story.find(params[:id])
-  #   @story.unlike_by current_user
-  #   redirect_to stories_path
-  # end
 
   def story_params
     params.require(:story).permit(:title, :description, :image, :audio, :image_cache, :landmark_id, :language, :category)

@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :stories, only: [:index, :show, :new, :create, :destroy] do
+  resources :stories, only: [:index, :show, :new, :create, :destroy, :edit, :update] do
     member do
       put "like", to: "stories#upvote"
       put "unlike", to: "stories#unlike"

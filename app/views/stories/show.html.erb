@@ -33,6 +33,9 @@
       <%= link_to story_path(@story), method: :delete, class: "btn trash-button" do %>
       <i class="fa fa-trash"></i>
       <% end %>
+      <%= link_to edit_story_path(@story), class: "btn edit-button" do %>
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      <% end %>
       <% end %>
     </div>
   </div>
