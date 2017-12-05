@@ -1,0 +1,21 @@
+<% content_for :title, "Guided - Create Landmark" %>
+
+<% link = ['https://static.pexels.com/photos/15286/pexels-photo.jpg', 'https://static.pexels.com/photos/374710/pexels-photo-374710.jpeg', 'https://static.pexels.com/photos/572688/pexels-photo-572688.jpeg', 'https://static.pexels.com/photos/52599/pexels-photo-52599.jpeg'].sample %>
+
+<div class="background-image" style="background-image:url(<%=link%>);"></div>
+
+<div class="form-container" style="margin-top: 10px;">
+  <h1>Create a new landmark</h1>
+
+  <%= simple_form_for(@landmark) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :country %>
+  <%= f.input :city %>
+  <%= f.input :address %>
+  <%= f.input :image %>
+  <%= f.input :image_cache, as: :hidden %>
+  <%= f.submit "Create Landmark", class:"btn btn-primary" %>
+  <% end %>
+
+</div>

@@ -64,4 +64,25 @@ class LandmarksController < ApplicationController
     end
   end
 
+  def new
+    @landmark = Landmark.new
+  end
+
+  def create
+    @landmark = Landmark.new(landmark_params)
+    if @landmark.save
+      redirect_to landmark_path(@landmark)
+    else
+      render :new
+    end
+
+  end
+
+private
+
+  def landmark_params
+    params.require(:landmark).permit(:name, :description, :country, :city, :address, :image)
+  end
+
 end
+
