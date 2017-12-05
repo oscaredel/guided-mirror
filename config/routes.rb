@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   get 'landmarks/nearest', to: 'landmarks#nearest', as: 'nearest_landmark'
-  resources :landmarks, only: [:index, :show] do
+  resources :landmarks, only: [:index, :show, :new, :create, :destroy] do
     member do
       put "follow", to: "landmarks#follow"
     end

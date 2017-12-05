@@ -54,7 +54,6 @@ class LandmarksController < ApplicationController
     end
   end
 
-
   def follow
     @landmark = Landmark.find(params[:id])
     if current_user.following?(@landmark)
@@ -64,4 +63,30 @@ class LandmarksController < ApplicationController
     end
   end
 
+  def new
+    @landmark = Landmark.new
+  end
+
+  def create
+    @landmark = Landmark.new(landmark_params)
+    if @landmark.save
+      redirect_to landmark_path(@landmark)
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @landmark = Landmark.find(params[:id])
+    @landmark.destroy
+    redirect_to landmarks_path
+  end
+
+private
+
+  def landmark_params
+    params.require(:landmark).permit(:name, :description, :country, :city, :address, :image)
+  end
+
 end
+
