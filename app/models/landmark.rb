@@ -3,7 +3,7 @@ class Landmark < ApplicationRecord
   after_validation :geocode, if: :address_changed?
   has_many :stories
   validates :name, uniqueness: :true, presence: :true
-  validates :image, presence: :true
+  # validates :image, presence: :true
   # validates :lat, presence: :true
   # validates :lng, presence: :true
 
