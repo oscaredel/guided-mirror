@@ -54,7 +54,6 @@ class LandmarksController < ApplicationController
     end
   end
 
-
   def follow
     @landmark = Landmark.find(params[:id])
     if current_user.following?(@landmark)
@@ -75,7 +74,12 @@ class LandmarksController < ApplicationController
     else
       render :new
     end
+  end
 
+  def destroy
+    @landmark = Landmark.find(params[:id])
+    @landmark.destroy
+    redirect_to landmarks_path
   end
 
 private

@@ -14,21 +14,28 @@
       <p>
         <%= @landmark.description %>
       </p>
+
+      <% if current_user != nil && current_user.first_name == "Dieter" %>
+      <%= link_to landmark_path(@landmark), method: :delete, class: "btn trash-button" do %>
+      <i class="fa fa-trash"></i>
+      <% end %>
+      <% end %>
+
     </div>
     <div class="col-xs-12">
 
       <%= render 'stories/story_list', stories: @stories %>
       <div class="add-story">
 
-    <% if current_user != nil %>
+        <% if current_user != nil %>
         <%= link_to new_story_path(landmark: @landmark.id), class: "link-success" do %>
         <i class="fa fa-plus"></i> Add a story
         <% end %>
-    <% else %>
-    <%= link_to new_user_session_path, class: "link-success" do %>
+        <% else %>
+        <%= link_to new_user_session_path, class: "link-success" do %>
         <i class="fa fa-plus"></i> Add a story
         <% end %>
-    <% end %>
+        <% end %>
       </div>
     </div>
 
