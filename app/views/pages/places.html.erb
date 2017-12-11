@@ -1,0 +1,40 @@
+<br>
+<br>
+
+
+<% @client = GooglePlaces::Client.new(ENV['GOOGLE_API_OPEN_KEY']) %>
+<% @client = GooglePlaces::Client.new("AIzaSyAn5htD0ZhEpeCzN5kdMMbhy1kFPe5D7gw")%>
+
+<% places = @client.spots(52.3839958, 4.9033621) %>
+
+<div class="container">
+<h1>Nearby Places</h1>
+<div class="row">
+  <% places.each do |place| %>
+  <div class="col-xs-12 col-md-6">
+    <div class="card landmark-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= place.photos[0].fetch_url(400) %>);">
+      <div class="card-description">
+        <h2>
+          <%= place.name %>(<%=place.vicinity%>)
+        </h2>
+        <p>
+          <%= place.types %>
+        </p>
+      </div>
+    </div>
+
+    <div class="landmark-follow-star">
+      <img src="<%=  place.icon %>" alt="">
+    </div>
+
+
+  </div>
+    <% end %>
+</div>
+</div>
+
+
+<!--
+place.place_id
+place.vicinity
+ -->
