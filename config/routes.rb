@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # get 'contact', to: 'pages#contact'
   # get 'about', to: 'pages#about'
-
+  get 'places', to: 'pages#places'
   resources :users, only: [:show, :edit, :update] do
     member do
       put "follow", to: "users#follow"
