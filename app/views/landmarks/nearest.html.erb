@@ -1,5 +1,6 @@
 <% content_for :title, "Guided - Nearest landmark" %>
 
+<!-- Banner  -->
 <div class="landmarkshow-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.1) 0%, rgba(0,36,61,0.1) 50%), url(<%= @nearest_landmark.image %>);">
   <div class="landmarkbanner-content">
     <p>
@@ -13,20 +14,19 @@
 
 <div class="container">
   <div class="row">
+
     <div class="col-xs-12 col-lg-6 landmarkshow-content">
       <p>
         <%= @nearest_landmark.description %>
       </p>
-
-
     </div>
 
+<!-- Display Stories attached to current nearest location -->
     <div class="col-xs-12">
-
       <%= render 'stories/story_list', stories: @stories %>
-
     </div>
 
+<!-- Add a new story -->
     <div class="col-xs-12 new-nearest-story-button">
       <% if current_user != nil %>
       <%= link_to new_story_path(landmark: @nearest_landmark.id), class: "link-success" do %>
@@ -39,6 +39,8 @@
       <% end %>
     </div>
   </div>
+
+<!--   Show 4 nearest landmarks + map -->
   <div class="row">
     <div class="col-xs-12">
       <h2>Other landmarks near you</h2>
@@ -53,23 +55,20 @@
 </div>
 
 
-<!-- Testing Google Places -->
-
-<% @client = GooglePlaces::Client.new("AIzaSyAn5htD0ZhEpeCzN5kdMMbhy1kFPe5D7gw")%>
-
-<% places = @client.spots(params[:coord][0], params[:coord][1], :radius => 1500) %>
-
+<!--################## Experimentation zone ##############################################-->
 
 <div class="container">
   <h1>Nearby Google Places</h1>
   <div class="row">
-    <% places.each do |place| %>
+    <% places.each do |place| %>  <!-- Start -->
     <div class="col-xs-12 col-md-6">
-      <% if place.photos[0] != nil %>
+      <% if place.photos[0] != nil %> <!-- Start -->
+
       <div class="card landmark-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url( <%= place.photos[0].fetch_url(400) %>);">
         <% else %>
         <div class="card landmark-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(http://21642-presscdn.pagely.netdna-cdn.com/wp-content/themes/nucleare-pro/images/no-image-box.png;">
-          <% end %>
+          <% end %> <!-- end -->
+
           <div class="card-description">
             <h2>
               <%= place.name %>(<%=place.vicinity%>)
@@ -81,11 +80,27 @@
         </div>
 
         <div class="landmark-follow-star">
-          <img src="<%=  place.icon %>" alt="">
+          <img src="<%= place.icon %>" alt="">
         </div>
-
-
       </div>
-      <% end %>
+
+      <% end %> <!-- end -->
     </div>
-  </div>
+
+    <!-- Input for places search-->
+    <br>
+    <input name="location" id="location" value="search" />
+    <script>
+      const locationInput = document.getElementById("location");
+      console.log(locationInput.value);
+      locationInput.addEventListener("click", (event) => {
+      // console.log(event)
+      console.log(locationInput.value)
+      });
+    </script>
+
+<!-- Not going to work because input is javascript -->
+    <% @client.predictions_by_input('locationInput.value') %>
+
+</div>
+</div>
