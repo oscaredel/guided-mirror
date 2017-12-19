@@ -34,6 +34,10 @@ class LandmarksController < ApplicationController
         height: 32
         })
     end
+
+    # Google places test
+    @client = GooglePlaces::Client.new("AIzaSyAn5htD0ZhEpeCzN5kdMMbhy1kFPe5D7gw")
+    places = @client.spots(params[:coord][0], params[:coord][1], :radius => 1500)
   end
 
   def show
